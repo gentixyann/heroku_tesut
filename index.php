@@ -8,7 +8,7 @@
 
 <?php
 
-echo "Hello heroku";
+echo "Hello heroku, how are you";
 
 ?>
 
