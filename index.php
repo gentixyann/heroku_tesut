@@ -1,3 +1,11 @@
+<?php
+
+echo "Hello heroku, how are you";
+
+phpinfo();
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,12 +13,6 @@
 <title>Document</title>
 </head>
 <body>
-
-<?php
-
-echo "Hello heroku, how are you";
-
-?>
 
 </body>
 </html>
