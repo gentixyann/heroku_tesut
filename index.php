@@ -9,11 +9,12 @@ echo "Hello heroku, how are you";
 <head>
 <meta charset="UTF-8">
 <title>Document</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <a href="https://www.youtube.com/watch?v=ePrE8kTAY2E">ここでいいかな</a>
-<a href="us_googlein/help.php">ヘルプ</a>
+<p id="top">ヘルプ</p>
 
 </body>
 </html>
