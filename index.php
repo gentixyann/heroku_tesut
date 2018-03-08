@@ -2,8 +2,6 @@
 
 echo "Hello heroku, how are you";
 
-phpinfo();
-
 ?>
 
 <!DOCTYPE html>
