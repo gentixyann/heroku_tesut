@@ -13,6 +13,7 @@ echo "Hello heroku, how are you";
 <body>
 
 <a href="https://www.youtube.com/watch?v=ePrE8kTAY2E">ここでいいかな</a>
+<a href="search_book.php">本を見る</a>
 
 </body>
 </html>
