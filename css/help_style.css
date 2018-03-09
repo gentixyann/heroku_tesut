@@ -1093,7 +1093,7 @@ input::-ms-input-placeholder {
     font-size: 1.575rem;
     display: inline-block;
     margin-right: 15px;
-    background: url(../images/ch_col_icn.png) no-repeat left center;
+    /*background: url(../images/ch_col_icn.png) no-repeat left center;*/
     width:49px;
     height: 48px;
     line-height: 48px;
@@ -1102,7 +1102,7 @@ input::-ms-input-placeholder {
 }
 .choose .main_choose .single_choose .single_choose_acording .panel-title:hover a i{
     color: #fff;
-    background: url(../images/ch_col_icn_h.png) no-repeat left center;
+    /*background: url(../images/ch_col_icn_h.png) no-repeat left center;*/
 }
 .choose .main_choose .single_choose .single_choose_acording .panel-title a i.fa-chevron-down{
     float:right;

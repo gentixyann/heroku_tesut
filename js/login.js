@@ -32,6 +32,16 @@ $(document).ready(function(){
 //  $('.social-links').hide();
 //  $('.webscope').hide();
 
+//登録内容確認
+    var user = $("#user").val();
+    $("#nick_name").val(user);
+
+    var email = $("#user1").val();
+    $("#email").val(email);
+
+    var pwd = $("#pwd1").val();
+    $("#password").val(email);
+
   });
 
 });
