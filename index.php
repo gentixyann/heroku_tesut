@@ -16,7 +16,10 @@ echo "Hello heroku, how are you";
 <body>
 
 <a href="https://www.youtube.com/watch?v=ePrE8kTAY2E">ここでいいかな</a>
+<a href="json_map.html" class="submit_button">
 <p id="top">ヘルプ</p>
+</a>
+
 <img src="img/yt_logo.png">
 <a href="contact.html">ここでいいかな</a>
 
