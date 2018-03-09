@@ -18,6 +18,7 @@ echo "Hello heroku, how are you";
 <a href="https://www.youtube.com/watch?v=ePrE8kTAY2E">ここでいいかな</a>
 <p id="top">ヘルプ</p>
 <img src="img/yt_logo.png">
+<a href="contact.html">ここでいいかな</a>
 
  <script src="js/javascript.js"> </script>
 </body>

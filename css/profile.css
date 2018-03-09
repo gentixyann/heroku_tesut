@@ -1,0 +1,92 @@
+body {
+    background-image: url(assets/img/city.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 0;
+    height: 100%;
+}
+
+/*header {
+    margin-top: 0;
+}*/
+
+footer {
+    position:absolute;
+    bottom:0;
+}
+
+
+
+.profile_title{
+  text-align : center ;
+  font-size: 30px;
+
+}
+
+.submit_button{
+  text-align : center ; 
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.messages-up {
+    color:#fff;
+}
+
+.messages-table {
+    margin-top: 100px;
+}
+
+.messages {
+    float: left;
+    text-align: center;
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    border: 1px solid #eee;
+    margin: 40px;
+    /*background: #000000;*/
+    /*padding: 20px;*/
+    border-radius: 5px;
+    color:#696969;
+    margin-bottom:30px;
+}
+.messages-top {
+    width: 250px;
+    height: 0 auto;
+    /*border-radius: 100%;*/
+    /*border: 5px solid #fff;*/
+    margin: 0 auto;  
+}
+/*.messages-top p{
+    margin-top: 20px;
+}
+.messages-top sup{
+    font-size: 20px;
+    top: -3px;
+    left: -5px;
+}
+.messages-top em{
+    font-size: 25px;
+}
+.messages-top span{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-left: 20px;
+}*/
+/*.messages:hover {
+    background: #808080;
+    color: #2bb6c1;
+    transition-duration: .8s;
+}
+.messages:hover .pricing-top{
+    background: #fff;
+    color: #fff;
+    transition-duration: .8s;
+}
+.messages:hover {
+    background: #fff;
+    color: #2bb6c1;
+    transition-duration: .8s;
+}*/
