@@ -1,9 +1,9 @@
 <?php
-<!-- session_start();
+//  session_start();
 
 
-// DBに接続
-  require('dbconnect.php'); -->
+// // DBに接続
+//   require('dbconnect.php');
 
 $lang = "en";
 
