@@ -14,7 +14,7 @@ $url = parse_url(getenv("mysql://bff163e3ca75f8:c676bd1d@us-cdbr-iron-east-05.cl
     //$db = $url["heroku_02dda95d941a585"];
 
     $link = mysqli_connect($server, $username, $password, $db);
-    $result = mysqli_query($link, "SELECT * FROM heroku_02dda95d941a585.user");
+    $result = mysqli_query($link, "select * from user");
 
 
 var_dump($user['id']);
