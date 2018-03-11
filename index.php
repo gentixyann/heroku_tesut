@@ -18,6 +18,7 @@ $url = parse_url(getenv("mysql://bff163e3ca75f8:c676bd1d@us-cdbr-iron-east-05.cl
 
     while($user = mysqli_fetch_array($result)) {
       echo $user['id'], " : ", $user['name'], "<br>";
+      var_dump($user['id']);
     }
 
 
