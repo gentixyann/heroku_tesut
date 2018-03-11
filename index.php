@@ -11,7 +11,8 @@ $url = parse_url(getenv("mysql://bff163e3ca75f8:c676bd1d@us-cdbr-iron-east-05.cl
     $server = $url["us-cdbr-iron-east-05.cleardb.net"];
     $username = $url["bff163e3ca75f8"];
     $password = $url["c676bd1d"];
-    $db = substr($url["heroku_02dda95d941a585"], 1);
+    //$db = substr($url["heroku_02dda95d941a585"], 1);
+    $db = $url["heroku_02dda95d941a585"];
 
     $link = mysqli_connect($server, $username, $password, $db);
     $result = mysqli_query($link, "select * from user");
