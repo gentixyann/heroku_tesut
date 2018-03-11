@@ -5,10 +5,6 @@
 // // DBに接続
   //require('dbconnect.php');
 
-
-
-echo $dbh;
-
 $url = parse_url(getenv("mysql://bff163e3ca75f8:c676bd1d@us-cdbr-iron-east-05.cleardb.net/heroku_02dda95d941a585?reconnect=true"));
 
     $server = $url["us-cdbr-iron-east-05.cleardb.net"];
