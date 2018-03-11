@@ -32,6 +32,8 @@ $db = parse_url($_SERVER['mysql://bff163e3ca75f8:c676bd1d@us-cdbr-iron-east-05.c
 $db['dbname'] = ltrim($db['path'], '/');
 $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
 
+var_dump($db);
+
 try {
     $db = new PDO($dsn, $db['user'], $db['pass']);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
