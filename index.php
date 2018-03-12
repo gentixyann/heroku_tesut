@@ -16,34 +16,36 @@ require('dbconnect.php');
 
 // $conn = new mysqli($server, $username, $password, $db);
 
-$sql = 'select * from user';
+try{
+
+$sql = 'select * from whereis_map';
 $stmt = $dbh->prepare($sql);
 $stmt->execute();
 
-$login_member = $stmt->fetch(PDO::FETCH_ASSOC);
+ $marker_info["Markers"] = array();
+while(1){
+$marker_data = $stmt->fetch(PDO::FETCH_ASSOC);
+ $marker_info["Markers"][] = $marker_data;
 //     $link = mysqli_connect($server, $username, $password, $db);
 //     $result = mysqli_query($link, "select * from user");
 
+if ($marker_data == false){
+         break;//中断する
+     }else{            
+    $json = json_encode($marker_info, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES); 
+        var_dump($json);
+   }
 
 
-//   // DB接続オブジェクト
-//   $dbh = new PDO($dsn, $user, $password);
-
-//   // 例外処理を使用可能にする方法（エラー文を表示することが出来る）
-//   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-// // 今から実行するSQL文を文字コードutf8で
-//  $dbh->query('SET NAMES utf8');
-
-
-var_dump($login_member);
+}
 //     while($user = mysqli_fetch_array($result)) {
 //       echo $user['id'], " : ", $user['name'], "<br>";
 //       var_dump($user['id']);
 // //     }
 
+}catch(Exception $e){
 
+  }
 
 ?>
 
