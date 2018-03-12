@@ -199,7 +199,7 @@ function jsonRequest(json){
   }
   return data;
 }
-    
+
     
     
     
@@ -221,12 +221,18 @@ function jsonRequest(json){
     
     var map;
      var marker = "";
+      var randomLat = Math.random()*140 - 70;   
+    var randomLng = Math.random()*360 - 180;
 
 // マップを生成して、複数のマーカーを追加
 function initialize(data/*Array*/){
   var op={
-    zoom:13,
-    center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
+        
+    zoom:5,
+    //center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
+      
+     center:new google.maps.LatLng(randomLat.toFixed(6),randomLng.toFixed(6)),
+    
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
    map=new google.maps.Map(document.getElementById("map_canvas"),op);
@@ -242,7 +248,8 @@ function initialize(data/*Array*/){
         
         var infoWindow = new google.maps.InfoWindow({
             content:'<div class="infoWindow">'+
-             '<p>'+dat.iframe+'</p>'+'<input type="text class=comment">'+
+            //dat.movie_infoはDBのカラム名
+             '<p>'+dat.movie_info+'</p>'+
              '</div>'
         });
         
