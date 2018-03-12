@@ -31,20 +31,20 @@ try{
 
   }
 
-if(isset($_SESSION["lang"])){
-    $lang = $_SESSION["lang"];
+// if(isset($_SESSION["lang"])){
+//     $lang = $_SESSION["lang"];
 
-function trans($word,$lang){
-  //翻訳ファイルを読み込み
-  require("lang/words_".$lang.".php");
+// function trans($word,$lang){
+//   //翻訳ファイルを読み込み
+//   require("lang/words_".$lang.".php");
 
-  //配列からデータを取得
-  $trans_word = $word_list[$word];
+//   //配列からデータを取得
+//   $trans_word = $word_list[$word];
 
-  //文字を返す
-  return $trans_word;
-}
-}
+//   //文字を返す
+//   return $trans_word;
+// }
+// }
 
 ?>
 
@@ -128,6 +128,9 @@ function trans($word,$lang){
             </div>
             <!--container-->
         </div>
+
+
+
 
 
 
