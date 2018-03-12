@@ -99,26 +99,35 @@ function trans($word,$lang){
  <div id="gmap_wrapper">
   <div id="map_canvas"></div>
     </div>
-     
-    <div id="footer" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8 webscope">
-                <span class="webscope-text"> The world view by </span>
-                <a href=""> <img src="img/logo04.png"/> </a>
+
+
+
+
+<div class="footer">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-2"></div>
+
+                    <div class="col-sm-8 webscope">
+                        <span class="webscope-text"> The world view by </span>
+                        <a href=""> <img src="img/logo04.png"/> </a>
+                    </div>
+                    <!--webscope-->
+
+                    <div class="col-sm-2">
+
+                        <!--social-links-->
+                    </div>
+                    <!--social-links-parent-->
+
+                </div>
+                <!--row-->
+
             </div>
-            <!--webscope-->
-            <div class="col-sm-2">
-                
-                <!--social-links-->
-            </div>
-            <!--social-links-parent-->
+            <!--container-->
         </div>
-        <!--row-->
-    </div>
-    <!--container-->
-</div>
 
 
 
