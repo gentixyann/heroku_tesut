@@ -57,12 +57,12 @@ try{
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />   
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" type="text/css" href="css/map_style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/hero.css"/>
-   <link rel="stylesheet" type="text/css" href="css/map_style.css">
     <link rel="stylesheet" href="css/navi.css" />
     
     
