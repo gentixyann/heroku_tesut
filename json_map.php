@@ -65,7 +65,7 @@ function trans($word,$lang){
    <link rel="stylesheet" type="text/css" href="css/map_style.css">
     <link rel="stylesheet" href="css/navi.css" />
     
-    <script type="text/javascript" src="js/footerFixed.js"></script>
+    
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
@@ -327,6 +327,5 @@ function initialize(data/*Array*/){
 
  <script src="js/navi.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/footerFixed.js"></script>
 </body>
 </html>
