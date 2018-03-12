@@ -1,3 +1,40 @@
+<?php
+
+require('dbconnect.php');
+
+try{
+ //markerしてる人の情報とる
+    $sql = "SELECT * FROM `whereis_map` ";
+
+    //sql実行
+    //実行待ち
+    $stmt = $dbh->prepare($sql);
+    //実行
+    $stmt->execute();
+
+    $marker_info["Markers"] = array();
+     while (1) {
+
+          //PDOはPHP Data Objects FETCH_ASSOCは連想配列で取り出す意味
+     $marker_data = $stmt->fetch(PDO::FETCH_ASSOC);
+         $marker_info["Markers"][] = $marker_data;
+         
+         if ($marker_data == false){
+         break;//中断する
+     }else{            
+    $json = json_encode($marker_info, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES); 
+        //var_dump($json);
+   }
+     }
+
+}catch(Exception $e){
+
+  }
+
+
+
+?>
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -110,26 +147,54 @@
 
 <script type="text/javascript">
     
-   $(function(){
-  // JSONファイル読み込み開始
-  $.ajax({
-    url:"json/map.json",
-    cache:false,
-    dataType:"json",
-    success:function(json){
-      var data=jsonRequest(json);
-      initialize(data);
-    }
-  });
-});
+//    $(function(){
+//   // JSONファイル読み込み開始
+//   $.ajax({
+//     url:"json/map.json",
+//     cache:false,
+//     dataType:"json",
+//     success:function(json){
+//       var data=jsonRequest(json);
+//       initialize(data);
+//     }
+//   });
+// });
 
+//    // JSONファイル読み込み完了
+// function jsonRequest(json){
+//   var data=[];
+//   if(json.Marker){
+//     var n=json.Marker.length;
+//     for(var i=0;i<n;i++){
+//       data.push(json.Marker[i]);
+//     }
+//   }
+//   return data;
+// }
+
+
+
+
+
+
+ $(function(){
+    var json = <?php echo $json ?>;
+    console.log(json);
+
+    var data=jsonRequest(json);
+    console.log(data);
+    initialize(data);
+    });
+    
    // JSONファイル読み込み完了
 function jsonRequest(json){
   var data=[];
-  if(json.Marker){
-    var n=json.Marker.length;
+    
+    //Markersはjsonデータ配列のMarkerのこと。配列の塊を全て読み込んで、その数を変数nにする。
+  if(json.Markers){
+    var n=json.Markers.length;
     for(var i=0;i<n;i++){
-      data.push(json.Marker[i]);
+      data.push(json.Markers[i]);
     }
   }
   return data;
@@ -139,7 +204,8 @@ function jsonRequest(json){
     
     
     
-    console = null; // warningを表示しないようnullで(ry
+    
+    //console = null; // warningを表示しないようnullで(ry
   var currentInfoWindow = null;
   
   function createClickCallback(marker, infoWindow) {
