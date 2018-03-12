@@ -318,5 +318,6 @@ function initialize(data/*Array*/){
 
  <script src="js/navi.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/footerFixed.js"></script>
 </body>
 </html>
