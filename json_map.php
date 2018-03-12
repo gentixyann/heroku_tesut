@@ -1,159 +1,135 @@
-<?php
-session_start();
-require('dbconnect.php');
-
-try{
- //markerしてる人の情報とる
-    $sql = "SELECT * FROM `whereis_map` ";
-
-    //sql実行
-    //実行待ち
-    $stmt = $dbh->prepare($sql);
-    //実行
-    $stmt->execute();
-
-    $marker_info["Markers"] = array();
-     while (1) {
-
-          //PDOはPHP Data Objects FETCH_ASSOCは連想配列で取り出す意味
-     $marker_data = $stmt->fetch(PDO::FETCH_ASSOC);
-         $marker_info["Markers"][] = $marker_data;
-         
-         if ($marker_data == false){
-         break;//中断する
-     }else{            
-    $json = json_encode($marker_info, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES); 
-        //var_dump($json);
-   }
-     }
-
-}catch(Exception $e){
-
-  }
-
-// if(isset($_SESSION["lang"])){
-//     $lang = $_SESSION["lang"];
-
-// function trans($word,$lang){
-//   //翻訳ファイルを読み込み
-//   require("lang/words_".$lang.".php");
-
-//   //配列からデータを取得
-//   $trans_word = $word_list[$word];
-
-//   //文字を返す
-//   return $trans_word;
-// }
-// }
-
-?>
-
-
 <!doctype html>
 <html lang="ja">
 <head>
  <meta charset="utf-8" />
  <title>See</title>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />   
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" type="text/css" href="css/map_style.css">
+<!--    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>-->
+    
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    
+<!--    <link rel="stylesheet" href="css/responsive.css"/>-->
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   
     <link rel="stylesheet" href="css/hero.css"/>
+
+   <link rel="stylesheet" type="text/css" href="css/map_style.css">
+   
     <link rel="stylesheet" href="css/navi.css" />
     
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
+    <script type="text/javascript" src="js/footerFixed.js"></script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!--<script src="data.js"></script>-->
 </head>
 
 
 <header>
-       <a class="navbar-brand logo" href="index.php"></a>
+   
+       <a class="navbar-brand logo" href="#"></a>
        
-    <div class=" topnav" id="myTopnav"> 
-       <?php if (isset($_SESSION["id"])){ ?>
-       <a href="logout.php">Logout</a>
-       <a href="profile.php">MyPage</a>
-       <a href="post.php">POST</a>
-       <?php } ?>
-       <a href="help.php">Help</a>
-       <a href="contact.php">Contact</a>
-       <a class="active" href="json_map.php">*MAP*</a>
-      <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <div class=" topnav" id="myTopnav">
+      <a href="#">Logout</a>
+       <a href="#">Contact</a>
+       <a href="#">MyPage</a>
+       <a href="#">POST</a>
+       <a class="active" href="#">*MAP*</a>
+       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
+  
   </header>
+
+
+
+
 
 <body>
   
   <div class="row">
   <div class="col-xs-4 col-xs-offset-4">
-    <input type="text" id="address" class="form-control" placeholder="<?php echo trans("住所か地名ね",$lang); ?> ">
+  
+    <input type="text" id="address" class="form-control" placeholder="住所か地名ね">
   </div>
-    <button type="button" id="submit" class="btn btn-primary"> <?php echo trans("検索",$lang); ?> </button>
+    <button type="button" id="submit" class="btn btn-primary">検索</button>
+      
 </div>
+  
+  
+  
+<!--
+  <div id="floating-panel">
+    <input id="address" type="textbox" placeholder="住所か地名ね">
+    <input id="submit" type="button" value="Geocode">
+</div>
+-->
 
  <div id="gmap_wrapper">
   <div id="map_canvas"></div>
     </div>
+    
+    
+    <div id="footer" class="footer">
 
+    <div class="container">
+        <div class="row">
 
+            <div class="col-sm-2"></div>
 
-
-<div class="footer">
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-sm-2"></div>
-
-                    <div class="col-sm-8 webscope">
-                        <span class="webscope-text"> The world view by </span>
-                        <a href=""> <img src="img/logo04.png"/> </a>
-                    </div>
-                    <!--webscope-->
-
-                    <div class="col-sm-2">
-
-                        <!--social-links-->
-                    </div>
-                    <!--social-links-parent-->
-
-                </div>
-                <!--row-->
-
+            <div class="col-sm-8 webscope">
+                <span class="webscope-text"> The world view by </span>
+                <a href=""> <img src="img/logo04.png"/> </a>
             </div>
-            <!--container-->
+            <!--webscope-->
+
+            <div class="col-sm-2">
+                
+                <!--social-links-->
+            </div>
+            <!--social-links-parent-->
+
         </div>
+        <!--row-->
 
-
-
+    </div>
+    <!--container-->
+</div>
 
 
 
 <script type="text/javascript">
     
-    $(function(){
-    var json = <?php echo $json ?>;
-    console.log(json);
+   $(function(){
+  // JSONファイル読み込み開始
+  $.ajax({
+    url:"json/map.json",
+    cache:false,
+    dataType:"json",
+    success:function(json){
+      var data=jsonRequest(json);
+      initialize(data);
+    }
+  });
+});
 
-    var data=jsonRequest(json);
-    console.log(data);
-    initialize(data);
-    });
-    
    // JSONファイル読み込み完了
 function jsonRequest(json){
   var data=[];
-    
-    //Markersはjsonデータ配列のMarkerのこと。配列の塊を全て読み込んで、その数を変数nにする。
-  if(json.Markers){
-    var n=json.Markers.length;
+  if(json.Marker){
+    var n=json.Marker.length;
     for(var i=0;i<n;i++){
-      data.push(json.Markers[i]);
+      data.push(json.Marker[i]);
     }
   }
   return data;
@@ -163,7 +139,7 @@ function jsonRequest(json){
     
     
     
-//    console = null; // warningを表示しないようnullで(ry
+    console = null; // warningを表示しないようnullで(ry
   var currentInfoWindow = null;
   
   function createClickCallback(marker, infoWindow) {
@@ -179,19 +155,12 @@ function jsonRequest(json){
     
     var map;
      var marker = "";
-    var randomLat = Math.random()*140 - 70;   
-    var randomLng = Math.random()*360 - 180;
-    
-   
+
 // マップを生成して、複数のマーカーを追加
 function initialize(data/*Array*/){
   var op={
-        
-    zoom:5,
-    //center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
-      
-     center:new google.maps.LatLng(randomLat.toFixed(6),randomLng.toFixed(6)),
-    
+    zoom:13,
+    center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
    map=new google.maps.Map(document.getElementById("map_canvas"),op);
@@ -207,8 +176,7 @@ function initialize(data/*Array*/){
         
         var infoWindow = new google.maps.InfoWindow({
             content:'<div class="infoWindow">'+
-            //dat.movie_infoはDBのカラム名
-             '<p>'+dat.movie_info+'</p>'+
+             '<p>'+dat.iframe+'</p>'+'<input type="text class=comment">'+
              '</div>'
         });
         
@@ -232,9 +200,8 @@ function initialize(data/*Array*/){
             //現在地ボタン
             map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push
             (geolocationDiv); 
+      
 }
-    
-    
 // ]]>
      //住所検索の関数
          function geocodeAddress(geocoder, resultsMap){
@@ -253,9 +220,12 @@ function initialize(data/*Array*/){
                     map: resultsMap,
                     position: results[0].geometry.location,
                      zoom: 10
+                    
 //                    if(Marker){
 //                    Marker.setMap(null)
-//                };                                                                  
+//                };
+                                                    
+                                                    
                 });
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
@@ -325,7 +295,8 @@ function initialize(data/*Array*/){
          handleLocationError(false, map.getCenter());
             }
 }
-    
+
+        
 </script>
 
  <script src="js/navi.js"></script>
