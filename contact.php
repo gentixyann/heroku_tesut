@@ -18,6 +18,8 @@ require('dbconnect.php');
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
+      header("Location: contact.php");
+
 
       //文字指定
 mb_language("Japanese");
@@ -39,11 +41,6 @@ if ($send_mail) {
 } else {
   echo "no";
 }
-
-      header("Location: contact.php");
-
-
-
 
   }
 var_dump($_SESSION["id"]);
