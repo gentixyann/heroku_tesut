@@ -32,8 +32,6 @@ try{
   }
 
 var_dump($_SESSION["id"]);
-var_dump($login_member["id"]);
-
 ?>
 
 <!doctype html>
