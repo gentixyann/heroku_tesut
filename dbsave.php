@@ -7,6 +7,11 @@ session_start();
 
 echo "first";
 
+
+if (isset($_GET)) {
+  echo "first";
+}
+
 if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empty($_GET["userEmail"]))
 {
    $nick_name = $_GET["userName"];
