@@ -23,7 +23,11 @@ $subject = 'title';
 $message = 'body';
 $headers = 'From: from@hoge.co.jp' . "\r\n";
 
-mail($to, $subject, $message, $headers);
+if(mail($to, $subject, $message, $headers)){
+ echo "メールを送信しました";
+}else{
+  echo "メールの送信に失敗しました";
+}
 
 
 header("Location: contact.php");
