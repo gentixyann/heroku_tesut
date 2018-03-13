@@ -12,15 +12,29 @@ require('dbconnect.php');
     $inquiries = $_POST["inquiries"];
     $member_id = $_SESSION['id'];
 
-    //if(!isset($error)){
+    
       $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `inquiries`, `created`) VALUES ($member_id, '$nick_name', '$email', '$inquiries', now())";
       $data = array($nick_name, $email, $inquiries);
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
+
+      mb_language("Japanese");
+      mb_internal_encoding("UTF-8");
+      $to = "kokogento@gmail.com";
+      $title = "whereis";
+      $content = $inquiries;
+      if(mb_send_mail($to, $title, $content)){
+        echo "メールを送信しました";
+      } else {
+        echo "メールの送信に失敗しました";
+      };
+
       header("Location: contact.php");
 
-    //}
+
+
+
   }
 var_dump($_SESSION["id"]);
 
