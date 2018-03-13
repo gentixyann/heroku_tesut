@@ -9,8 +9,8 @@ echo "first";
 
 
 if (isset($_GET)) {
+  echo "あった";
   echo $_GET["userID"];
-  var_dump($_GET["userID"]);
 }
 
 if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empty($_GET["userEmail"]))
