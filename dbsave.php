@@ -5,7 +5,7 @@ session_start();
 // DBに接続
   require('dbconnect.php');
 
-echo "Fukc";
+echo "first";
 
 
 if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empty($_GET["userEmail"]))
@@ -14,6 +14,8 @@ if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empt
    $email = $_GET["userEmail"];
    $password = $_GET["userID"];
 
+
+echo "second";
    var_dump($email);
     
      try {
