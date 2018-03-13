@@ -21,26 +21,26 @@ require('dbconnect.php');
       header("Location: contact.php");
 
 
-      //文字指定
-mb_language("Japanese");
-mb_internal_encoding("UTF-8");
+//       //文字指定
+// mb_language("Japanese");
+// mb_internal_encoding("UTF-8");
 
-//メールの内容
-$to = "kokogento@gmail.com";
-$title = "ご無沙汰しております";
-$content = "おひさしぶりです\nまたお食事にでも行きましょう。"
-$from = "From: my-mail@example.com\r\n";
-$from .= "Return-Path: my-mail@example.com";
+// //メールの内容
+// $to = "kokogento@gmail.com";
+// $title = "ご無沙汰しております";
+// $content = "おひさしぶりです\nまたお食事にでも行きましょう。"
+// $from = "From: my-mail@example.com\r\n";
+// $from .= "Return-Path: my-mail@example.com";
 
-//メールの送信
-$send_mail = mb_send_mail($to, $title, $content, $from);
+// //メールの送信
+// $send_mail = mb_send_mail($to, $title, $content, $from);
 
-//メールの送信に問題ないかチェック
-if ($send_mail) {
-  echo "ok";
-} else {
-  echo "no";
-}
+// //メールの送信に問題ないかチェック
+// if ($send_mail) {
+//   echo "ok";
+// } else {
+//   echo "no";
+// }
 
   }
 var_dump($_SESSION["id"]);
