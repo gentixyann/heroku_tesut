@@ -123,14 +123,14 @@ var_dump($_SESSION["id"]);
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Your Name</label>
                       <div class="col-sm-8">
-                        <input type="text" name="nick_name" class="form-control" placeholder="例： Ryo Tamura"   value="">
+                        <input type="text" name="nick_name" class="form-control" placeholder=""   value="">
                       </div>
                   </div>
                   <!-- Email Address -->
                   <div class="form-group">
                     <label class="col-sm-3 control-label">E-mail</label>
                       <div class="col-sm-8">
-                        <input type="email" name="email" class="form-control" placeholder="例：   ryotamura@nexseed.com" value="">
+                        <input type="email" name="email" class="form-control" placeholder="" value="">
                       </div>
                   </div>
                   
