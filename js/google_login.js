@@ -78,11 +78,6 @@ function sendDb(userID, userName, userEmail, imageUrl){
                  userName: userName,
                  userEmail: userEmail,
                  userID: userID
-
-console.log('母');
-console.log(userEmail);
-console.log(userID);
-
              },
              function () {
               console.log('dbsave移動');
