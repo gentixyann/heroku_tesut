@@ -18,16 +18,16 @@ require('dbconnect.php');
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
-$to      = 'kokogento@gmail.com';
-$subject = 'title';
-$message = 'body';
-$headers = 'From: from@hoge.co.jp' . "\r\n";
+// $to      = 'kokogento@gmail.com';
+// $subject = 'title';
+// $message = 'body';
+// $headers = 'From: from@hoge.co.jp' . "\r\n";
 
-if(mail($to, $subject, $message, $headers)){
- echo "メールを送信しました";
-}else{
-  echo "メールの送信に失敗しました";
-}
+// if(mail($to, $subject, $message, $headers)){
+//  echo "メールを送信しました";
+// }else{
+//   echo "メールの送信に失敗しました";
+// }
 
 
 header("Location: contact.php");
