@@ -18,29 +18,15 @@ require('dbconnect.php');
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
-      header("Location: contact.php");
+$to      = 'kokogento@gmail.com';
+$subject = 'title';
+$message = 'body';
+$headers = 'From: from@hoge.co.jp' . "\r\n";
+
+mail($to, $subject, $message, $headers);
 
 
-//       //文字指定
-// mb_language("Japanese");
-// mb_internal_encoding("UTF-8");
-
-// //メールの内容
-// $to = "kokogento@gmail.com";
-// $title = "ご無沙汰しております";
-// $content = "おひさしぶりです\nまたお食事にでも行きましょう。"
-// $from = "From: my-mail@example.com\r\n";
-// $from .= "Return-Path: my-mail@example.com";
-
-// //メールの送信
-// $send_mail = mb_send_mail($to, $title, $content, $from);
-
-// //メールの送信に問題ないかチェック
-// if ($send_mail) {
-//   echo "ok";
-// } else {
-//   echo "no";
-// }
+header("Location: contact.php");
 
   }
 var_dump($_SESSION["id"]);
