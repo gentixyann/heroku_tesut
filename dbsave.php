@@ -8,9 +8,8 @@ session_start();
 echo "first";
 
 
-if (isset($_GET)) {
+if (isset($_GET["userID"])) {
   echo "あった";
-  echo $_GET["userID"];
 }
 
 if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empty($_GET["userEmail"]))
