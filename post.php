@@ -1,24 +1,29 @@
-<!-- <?php
+<?php
+session_start();
 
 //DBに接続
 require('dbconnect.php');
 
-if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_POST["iframe"])){
+if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_POST["iframe"]) && !empty($_POST["address"])){
   //trim関数 文字列の両端の空白を削除
+    $member_id = $_SESSION["id"];
     $lat = trim($_POST['lat']);
      $lng = trim($_POST['lng']);
      $iframe = trim($_POST['iframe']);
-
+    $address = trim($_POST['address']);
+    
+    
   try{
 //DBに動画情報を登録するSQL文
   //now() MySQLが用意した関数。現在日時を取得。
-  $sql = " INSERT INTO `map`(`lat`, `lng`,
-  `iframe`, `created`)
-   VALUES ('$lat','$lng','$iframe',now() )";
+  $sql = " INSERT INTO `whereis_map`(`member_id`, `lat`, `lng`,
+  `movie_info`, `address`, `created`)
+   VALUES ('$member_id', '$lat','$lng','$iframe','$address',now() )";
 
+      
   //SQL文実行
    //sha1 暗号化行う関数
-   $data = array($lat, $lng, $iframe);
+   $data = array($member_id, $lat, $lng, $iframe, $address);
 
 // print $sql."<br />\n";
 // var_dump($data);
@@ -33,47 +38,27 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
   }
 }
 
-try{
 
- //markerしてる人の情報とる
-    $sql = "SELECT * FROM `map` ";
+var_dump($_SESSION["lang"]);
 
-    //sql実行
-    //実行待ち
-    $stmt = $dbh->prepare($sql);
-    //実行
-    $stmt->execute();
+if(isset($_SESSION["lang"])){
+    $lang = $_SESSION["lang"];
 
-   
+function trans($word,$lang){
+  //翻訳ファイルを読み込み
+  require("lang/words_".$lang.".php");
 
-      //PDOはPHP Data Objects FETCH_ASSOCは連想配列で取り出す意味
-    $marker_data = $stmt->fetch(PDO::FETCH_ASSOC);
+  //配列からデータを取得
+  $trans_word = $word_list[$word];
 
-    //echo json_encode($marker_data);
-//var_dump($marker_data);
-
-  //   while (1) {
-
-  //     //PDOはPHP Data Objects FETCH_ASSOCは連想配列で取り出す意味
-  //   $marker_data = $stmt->fetch(PDO::FETCH_ASSOC);
-
-  //   if ($marker_data == false){
-  //       break;//中断する
-  //   }
-  // }
-
-
-
-}catch(Exception $e){
-
-  }
-
-
-
-
+  //文字を返す
+  return $trans_word;
+}
+}
 
 ?>
- -->
+
+
 
     <html>
 
