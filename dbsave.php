@@ -7,6 +7,10 @@ session_start();
 
 echo "first";
 
+if(isset(($_GET)){
+  echo "あった";
+}
+
 
 if(isset($_GET) && !empty($_GET["userID"]) && !empty($_GET["userName"]) && !empty($_GET["userEmail"]))
 {

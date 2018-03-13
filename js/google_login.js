@@ -83,7 +83,7 @@ function sendDb(userID, userName, userEmail, imageUrl){
               console.log('dbsave移動');
               console.log(userName);
              //window.open('json_map.php', '_self');
-             //window.open('dbsave.php', '_self');
+             window.open('dbsave.php', '_self');
              }
               );
  });
