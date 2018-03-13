@@ -50,7 +50,6 @@ function trans($word,$lang){
     <link rel="stylesheet" href="css/login.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -119,8 +118,8 @@ function trans($word,$lang){
                                                                
                         <div class="social" style="">
                            
-                           <!--  <div class="g-signin2" data-onsuccess="onSignIn" 
-                                 data-width=220 data-height="50"  data-longtitle="true"></div> -->                  
+                            <div class="g-signin2" data-onsuccess="onSignIn" 
+                                 data-width=220 data-height="50"  data-longtitle="true"></div>                  
                         </div>
                         
                     </div>
@@ -135,8 +134,8 @@ function trans($word,$lang){
 <script>
   // Initialize Firebase
   var config = {
-    //apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY",
-    apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw",  
+    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY",
+    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw",  
     authDomain: "where-map-e3a10.firebaseapp.com",
     databaseURL: "https://where-map-e3a10.firebaseio.com",
     projectId: "where-map-e3a10",
