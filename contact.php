@@ -174,6 +174,7 @@ var_dump($_SESSION["id"]);
   </div>
 
  <script src="js/navi.js"> </script>
+  <script src="js/warn_contact.js"> </script>
   <script>
     $(document).on('click', '#btn-submit', function(e) {
          e.preventDefault();
