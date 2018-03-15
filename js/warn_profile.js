@@ -17,8 +17,6 @@ $('.delete').click(function(){
 
 $(function(){
 
-// $("form").submit(function(){
-//$('#update').on('submit',function(e){
 $('#update').on('click',function(e){
 
 var err = 0;
@@ -58,3 +56,6 @@ return false;
 }); // end of submit
 
 });
+
+
+

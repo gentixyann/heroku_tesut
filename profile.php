@@ -5,20 +5,12 @@ session_start();
 require('dbconnect.php');
 //var_dump($_SESSION["id"]);
 
-  // if (isset($_POST["id"]) && empty($_POST["nick_name"]) && $_GET["error"] == 1) {
-    
-  //   header("Location: profile.php?error=1");
-  //   exit();
-  // }
-
 
   $sql = "SELECT * FROM `whereis_members` WHERE `id`=".$_SESSION["id"];
   $stmt = $dbh->prepare($sql);
   $stmt->execute();
 
   $login_member = $stmt->fetch(PDO::FETCH_ASSOC);
-
-  // var_dump($login_member['id']);
 
 
   if(isset($_POST["nick_name"]) && !empty($_POST["nick_name"]) || isset($_POST["email"]) && !empty($_POST["email"])){
@@ -38,9 +30,6 @@ require('dbconnect.php');
   $movie_stmt = $dbh->prepare($movie_sql);
   $movie_stmt->execute($movie_data);
 
-        //var_dump($movie_sql);
-        //var_dump($movie_data);
-
      $whereis_map = array();
       while(1){
 
@@ -53,29 +42,7 @@ require('dbconnect.php');
 
       }
 
-
-
-
-
-        // if(isset($_POST["delete"])){
-        //   // var_dump(isset($_POST["delete"]))
-        //   $delete_movie = $whereis_map[0]["id"];
-
-        //   var_dump($delete_movie);
-
-
-        //   $del_sql = "DELETE FROM `whereis_map` WHERE `id`=".$delete_movie;
-        //   $del_stmt = $dbh->prepare($del_sql);
-        //   $del_stmt ->execute();
-
-        //   header("Location: profile.php?member_id".$_SESSION["id"]);
-        //   exit();
-        // }
-
-
   }
-
-   // var_dump($_POST);
       if (!empty($_POST["delete"])) {
         $del_sql = "DELETE FROM `whereis_map` WHERE `id`=".$_POST["delete"];
           $del_stmt = $dbh->prepare($del_sql);
@@ -99,15 +66,9 @@ require('dbconnect.php');
 
     <title>My Page</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/form.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/timeline.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.css" rel="stylesheet">  
     <link href="css/profile_tmp.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
-    <!-- <link rel="styleseet" type="text/css" href="assets/css/bootstrap.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="profile.css"> -->
-    <!-- header -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/hero.css" />
@@ -184,16 +145,9 @@ require('dbconnect.php');
                   echo $created_date;
                   ?>
                   </a><br>
-                  <!-- <?php //if(isset($_GET["id"]) && !empty($_GET["id"])){}?> -->
-                   <!--  <input id="btn-delete" name="delete" type="submit" class="btn btn-default delete" value="削除"  data-add="<?php echo $one_movie["<address></address>"];?>"> -->
-
-
-
 
                     <input type="hidden" name="delete" value="<?php echo $one_movie["id"] ; ?>" >
                     <input type="submit" class="delete" value="削除">
-
-                    <!-- <a href="profile.php?id=<?php // echo $one_movie["id"]; ?>"><input id="btn-delete" type="button" class="btn btn-default" value="削除"></a> -->
 
                   <br><br>
                 </form>
@@ -218,13 +172,7 @@ require('dbconnect.php');
   </div>
 
   <script src="js/navi.js"> </script>
-
-  <!-- ポイント2つ -->
-  <!-- form、inputにidをつける -->
-  <!-- 関数でまとめる -->
-  <!-- Change Profile -->
-
-<script src="js/warning_form.js"></script>
+<script src="js/warn_profile.js"></script>s
 
 </body>
 </html>

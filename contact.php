@@ -48,12 +48,6 @@ var_dump($_SESSION["id"]);
     <title>Contact Us</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <!--<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">-->
-    <!--link href="assets/css/form.css" rel="stylesheet">-->
-    <!--<link href="assets/css/timeline.css" rel="stylesheet">-->
-    <!-- <link href="css/profile_tmp.css" rel="stylesheet"> -->
-    <!-- <link href="css/profile.css" rel="stylesheet"> -->
-    <!--<link rel="styleseet" type="text/css" href="assets/css/bootstrap.css">-->
     <script type="text/javascript" src="js/footerFixed.js"></script>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -124,7 +118,6 @@ var_dump($_SESSION["id"]);
       <section>
         <div class="col-xs-4">
           <div id="map"></div>
-             <!--<img src="https://res.cloudinary.com/lenadi07/image/upload/v1466697668/3_wtc6if.png" width="250" height="250"  />-->
         </div>
 
             <div class="col-xs-6">
@@ -181,11 +174,6 @@ var_dump($_SESSION["id"]);
   </div>
 
  <script src="js/navi.js"> </script>
-   <!-- 問題 -->
-  <!-- ポイント2つ -->
-  <!-- form、inputにidをつける -->
-  <!-- 関数でまとめる -->
-  <!-- Change Profile -->
   <script>
     $(document).on('click', '#btn-submit', function(e) {
          e.preventDefault();
