@@ -38,9 +38,6 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
   }
 }
 
-var_dump($_SESSION["id"]);
-var_dump($_SESSION["lang"]);
-
 if(isset($_SESSION["lang"])){
     $lang = $_SESSION["lang"];
 

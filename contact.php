@@ -33,7 +33,6 @@ require('dbconnect.php');
 header("Location: contact.php");
 
   }
-var_dump($_SESSION["id"]);
 
 ?>
 

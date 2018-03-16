@@ -45,7 +45,6 @@ function trans($word,$lang){
   return $trans_word;
 }
 }
-var_dump($_SESSION["id"]);
 ?>
 
 

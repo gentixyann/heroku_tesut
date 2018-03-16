@@ -130,7 +130,7 @@ require('dbconnect.php');
               <br>
 
                 <div> <?php echo $one_movie["movie_info"]; ?></div>
-                <div> <?php echo $one_movie["id"]; ?></div>
+                
 
                 <form id="delete" method="post">
                   <a><?php echo $one_movie["address"];?></a>
