@@ -99,7 +99,7 @@ require('dbconnect.php');
         <form id="" method="post" action="" class="form-horizontal" role="form" enctype="multipart/form-data">
           <!-- Nick Name -->
           <div class="form-group">
-            <label for="nick_name1" class="col-sm-3 control-label">Nick Name</label>
+            <label for="nick_name1" class="col-sm-3 control-label">Name</label>
             <div class="col-sm-8">
               <p><?php echo $login_member["nick_name"]; ?></p>
             </div>
