@@ -22,7 +22,7 @@
          "⑸動画埋め込みコードの所に貼り付けて、GO や！"=>"⑸Pasted on embed code, and GO！",
          "例えば、肖像権侵害と思われる動画を発見。通報と削除依頼をする場合は"=>"If you feel that someone is infrinfing your portrait, you can report it to us from ",
          "から申請をしてください。ただし、Youtubeから消えるわけではないのでご注意を。"=>"However, it doesn't remove from Youtube.",
-         "Contact Usからお問い合わせしてね"=>"Please ask us from Contact Us");
+         "Contact Usからお問い合わせしてね"=>"Please ask us from Contact Us ");
 
 
 ?>

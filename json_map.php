@@ -104,9 +104,9 @@ var_dump($_SESSION["id"]);
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8 webscope">
-            <span class="webscope-text"> <a href="privacy_policy.html">Privacy Policy </a></span>
-                <span class="webscope-text"> <a href="terms_of_use.html">Team Of Use </a></span>
-                 <span class="webscope-text"> <a href="contact.php">Contact Us</a></span>
+             <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
+                <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
+                <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
                 <span class="webscope-text"> The world view by </span>
                 <a href=""> <img src="img/logo04.png"/> </a>
             </div>
