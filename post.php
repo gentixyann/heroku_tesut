@@ -93,7 +93,6 @@ function trans($word,$lang){
        <a class="active" href="post.php">POST</a>
        <?php } ?>
        <a href="help.php">Help</a>
-       <a href="contact.php">Contact</a>
        <a href="json_map.php">*MAP*</a>
       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>  
