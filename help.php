@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-var_dump($_SESSION["id"]);
 
 if(isset($_SESSION["lang"])){
     $lang = $_SESSION["lang"];
@@ -76,9 +75,8 @@ function trans($word,$lang){
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        /*height: 100%;*/
         height:300px;
-        width: 300px;
+        width: 80%;
         /*border-radius: 50%;*/
       }
       /* Optional: Makes the sample page fill the window. */
@@ -111,7 +109,7 @@ function trans($word,$lang){
     <div class="container">
       <div class="row">
         <div class="main_choose sections">
-          <div class="col-sm-6">
+          <div class="center-block">
             <div class="head_title">
               <legend class="profile_title">HELP</legend>
               
@@ -119,17 +117,15 @@ function trans($word,$lang){
                 <div class="single_choose">
                   <div class="single_choose_acording">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
+                      
                       <div class="panel panel-default">
-
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                     <a class="collapsed">
                       <i class="fa fa-bullseye"></i>WHAT IS  " WHERE IS * " ?
-                      </a>
+                          </a>
                       </h4>
                       </div>
-
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                        <?php echo trans("俺たちの遊び。",$lang); ?> <br>
@@ -137,18 +133,16 @@ function trans($word,$lang){
                       </div>
                       </div>
                       </div>
-
+                                          
                       <div class="panel panel-default">
-
-                      <div class="panel-heading" role="tab" id="headingTwo">
+                      <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <i class="fa fa-bullseye"></i> How To Post
-                      </a>
+                     <a class="collapsed">
+                      <i class="fa fa-bullseye"></i>How To Post
+                          </a>
                       </h4>
                       </div>
-
-                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                      <?php echo trans("⑴まずここでログイン必要やから",$lang); ?> <br>
                       <?php echo trans("⑵youtubeアカウントある？まずそっちにアップして。え？それがそもそもわからんって？これ見てガンバー",$lang); ?>&nbsp;&nbsp;<u>
@@ -160,34 +154,46 @@ function trans($word,$lang){
                       </div>
                       </div>
                       </div>
-
-
+                                  
                       <div class="panel panel-default">
-
-                      <div class="panel-heading" role="tab" id="headingThree">
+                      <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <i class="fa fa-bullseye"></i> HOW DO I REPORT ?
-                      </a>
+                     <a class="collapsed">
+                      <i class="fa fa-bullseye"></i>HOW DO I REPORT ?
+                          </a>
                       </h4>
                       </div>
-
-                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                       <?php echo trans("例えば、肖像権侵害と思われる動画を発見。通報と削除依頼をする場合は",$lang); ?><u><a href="contact.php" style="display:inline">Contact Us</a></u> <?php echo trans("から申請をしてください。ただし、Youtubeから消えるわけではないのでご注意を。",$lang); ?>
                       </div>
                       </div>
                       </div>
-
+                      
+                      <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                     <a class="collapsed">
+                      <i class="fa fa-bullseye"></i>Other
+                          </a>
+                      </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
+                      <div class="panel-body">
+                      <?php echo trans("Contact Usからお問い合わせしてね",$lang); ?><u><a href="contact.php" style="display:inline">Contact Us</a></u> 
+                      </div>
+                      </div>
+                      </div>
 
                     </div>
                   </div>
                 </div>
         </div>
-
-        <div class="col-sm-4 col-sm-offset-1">
-              <div id="map"></div>
+        
+        <div>
+            <div class="center-block" id="map"></div>
         </div>
+        
       </div>
     </div>
   </div>
