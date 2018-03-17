@@ -3,5 +3,7 @@
     "description": "first",
     "type": "library",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+       "sendgrid/sendgrid": "~5.0.9"
+    }
 }
