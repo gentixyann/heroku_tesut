@@ -5,18 +5,42 @@ session_start();
 
 require('dbconnect.php');
 
-  if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"])){
+  // if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"])){
+
+  //   $nick_name = $_POST["nick_name"];
+  //   $email = $_POST["email"];
+  //   $inquiries = $_POST["inquiries"];
+  //   $member_id = $_SESSION['id'];
+
+    
+  //     $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `inquiries`, `created`) VALUES ($member_id, '$nick_name', '$email', '$inquiries', now())";
+  //     $data = array($nick_name, $email, $inquiries);
+  //     $stmt = $dbh->prepare($sql);
+  //     $stmt->execute();
+
+
+
+
+ if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"]) && !empty($_POST["title"])){
 
     $nick_name = $_POST["nick_name"];
     $email = $_POST["email"];
     $inquiries = $_POST["inquiries"];
+    $title = $_POST["title"];
     $member_id = $_SESSION['id'];
 
     
-      $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `inquiries`, `created`) VALUES ($member_id, '$nick_name', '$email', '$inquiries', now())";
-      $data = array($nick_name, $email, $inquiries);
+      $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `title`, `inquiries`, `created`) 
+      VALUES ($member_id, '$nick_name', '$email', '$title', '$inquiries', now())";
+      $data = array($nick_name, $email, $title, $inquiries);
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
+
+
+
+
+
+
 
 // $to      = 'kokogento@gmail.com';
 // $subject = 'title';
@@ -133,6 +157,13 @@ header("Location: contact.php");
                     <label class="col-sm-3 control-label">E-mail</label>
                       <div class="col-sm-8">
                         <input type="email" name="email" class="form-control" placeholder="" value="">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Title</label>
+                      <div class="col-sm-8">
+                        <input type="email" name="title" class="form-control" placeholder="" value="">
                       </div>
                   </div>
                   
