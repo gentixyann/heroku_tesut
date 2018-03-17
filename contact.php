@@ -24,7 +24,7 @@ require('dbconnect.php');
 
 require 'vendor/autoload.php';
 
-$from = new SendGrid\Email(null, "a551.return@yahoo.ne.jp");
+$from = new SendGrid\Email(null, "noreply@gmail.com");
 $subject = "Hello World from the SendGrid PHP Library!";
 $to = new SendGrid\Email(null, "wheview@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
