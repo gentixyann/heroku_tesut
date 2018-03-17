@@ -1,25 +1,7 @@
 <?php 
 session_start();
 
-
-
 require('dbconnect.php');
-
-  // if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"])){
-
-  //   $nick_name = $_POST["nick_name"];
-  //   $email = $_POST["email"];
-  //   $inquiries = $_POST["inquiries"];
-  //   $member_id = $_SESSION['id'];
-
-    
-  //     $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `inquiries`, `created`) VALUES ($member_id, '$nick_name', '$email', '$inquiries', now())";
-  //     $data = array($nick_name, $email, $inquiries);
-  //     $stmt = $dbh->prepare($sql);
-  //     $stmt->execute();
-
-
-
 
  if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"]) && !empty($_POST["title"])){
 
@@ -36,26 +18,28 @@ require('dbconnect.php');
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
+//header("Location: contact.php");
 
 
 
+require 'vendor/autoload.php';
 
+$from = new SendGrid\Email(null, "test@example.com");
+$subject = "Hello World from the SendGrid PHP Library!";
+$to = new SendGrid\Email(null, "wheview@gmail.com");
+$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
+$apiKey = getenv('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');
+$sg = new \SendGrid($apiKey);
 
-// $to      = 'kokogento@gmail.com';
-// $subject = 'title';
-// $message = 'body';
-// $headers = 'From: from@hoge.co.jp' . "\r\n";
-
-// if(mail($to, $subject, $message, $headers)){
-//  echo "メールを送信しました";
-// }else{
-//   echo "メールの送信に失敗しました";
-// }
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
 
 
 header("Location: contact.php");
-
   }
 
 ?>
