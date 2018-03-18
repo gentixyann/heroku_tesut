@@ -26,9 +26,9 @@ iframe{
     height: 280px !important;
 }
 
-@media screen and (min-width: 480px){
+/*@media screen and (min-width: 480px){
     iframe{
     width: 250px !important;
     height: 140px !important;
 }
-}
+}*/
