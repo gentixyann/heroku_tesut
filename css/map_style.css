@@ -4,8 +4,6 @@ html, body {
         padding: 0;
       }
 
-
-
 #gmap_wrapper {
 width:100%;
 padding-top:50%;
@@ -28,5 +26,9 @@ iframe{
     height: 280px !important;
 }
 
-.comment{
+@media screen and (min-width: 480px){
+    iframe{
+    width: 250px;
+    height: 140px;
+}
 }
