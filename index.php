@@ -36,7 +36,7 @@ function trans($word,$lang){
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Where is *(アスタリスク)</title>
+    <title>WheView</title>
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <!--    Goodle クライアントID-->
