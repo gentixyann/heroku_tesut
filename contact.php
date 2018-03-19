@@ -38,12 +38,12 @@ require('dbconnect.php');
   $sg = new \SendGrid($API_KEY);
   $response = $sg->client->mail()->send()->post($mail);
 
-   if ($response->statusCode() == 202) {
-   // Successfully sent
-   echo 'done';
- } else {
-   echo 'false';
- }
+ //   if ($response->statusCode() == 202) {
+ //   // Successfully sent
+ //   echo 'done';
+ // } else {
+ //   echo 'false';
+ // }
 
 header("Location: contact.php");
   }
