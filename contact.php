@@ -24,19 +24,29 @@ require('dbconnect.php');
 
 require 'vendor/autoload.php';
 
-$from = new SendGrid\Email(null, "noreply@gmail.com");
-$subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "wheview@gmail.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
+// $from = new SendGrid\Email(null, "noreply@gmail.com");
+// $subject = "Hello World from the SendGrid PHP Library!";
+// $to = new SendGrid\Email(null, "wheview@gmail.com");
+// $content = new SendGrid\Content("text/plain", "Hello, Email!");
+// $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('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');
-$sg = new \SendGrid($apiKey);
+// $apiKey = getenv('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');
+// $sg = new \SendGrid($apiKey);
 
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+// $response = $sg->client->mail()->send()->post($mail);
+// echo $response->statusCode();
+// echo $response->headers();
+// echo $response->body();
+
+
+$sendgrid = new SendGrid(getenv('app90104884@heroku.com'), getenv('vlyyzhb21529'));
+$email = new SendGrid\Email();
+$email->addTo('wheview@gmail.com')->
+    setFrom('from@example.com')->
+    setSubject('件名')->
+    setText('こんにちは！');
+
+$sendgrid->send($email);
 
 
 header("Location: contact.php");
