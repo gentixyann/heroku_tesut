@@ -26,20 +26,37 @@ header("Location: contact.php");
 
   require 'vendor/autoload.php';
 
-$from = new SendGrid\Email("Black", "naomi-noreply@google.com");
-$subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email("Red", "wheview@gmail.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
+// $from = new SendGrid\Email("Black", "naomi-noreply@google.com");
+// $subject = "Hello World from the SendGrid PHP Library!";
+// $to = new SendGrid\Email("Red", "wheview@gmail.com");
+// $content = new SendGrid\Content("text/plain", "Hello, Email!");
 
 
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
-$apiKey = getenv('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');
-$sg = new \SendGrid($apiKey);
+// $mail = new SendGrid\Mail($from, $subject, $to, $content);
+// $apiKey = getenv('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');
+// $sg = new \SendGrid($apiKey);
 
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+// try {
+//     $response = $sg->client->mail()->send()->post($mail);
+// } catch (Exception $e) {
+//     echo 'Caught exception: ',  $e->getMessage(), "\n";
+// }
+
+
+// echo $response->statusCode();
+// echo $response->headers();
+// echo $response->body();
+
+
+
+$sendgrid = new SendGrid(getenv('app90104884@heroku.com'), getenv('vlyyzhb21529'));
+$email = new SendGrid\Email();
+$email->addTo('wheview@gmail.com')->
+    setFrom('from@example.com')->
+    setSubject('件名')->
+    setText('こんにちは！');
+
+$sendgrid->send($email);
 
 ?>
 
