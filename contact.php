@@ -36,24 +36,24 @@ $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
 
-try {
-    $response = $sg->client->mail()->send()->post($mail);
-} catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
+// try {
+//     $response = $sg->client->mail()->send()->post($mail);
+// } catch (Exception $e) {
+//     echo 'Caught exception: ',  $e->getMessage(), "\n";
+// }
 
 
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+// echo $response->statusCode();
+// echo $response->headers();
+// echo $response->body();
 
 
-// if ($response->statusCode() == 202) {
-//     // Successfully sent
-//     echo 'done';
-//   } else {
-//     echo 'false';
-//   }
+if ($response->statusCode() == 202) {
+    // Successfully sent
+    echo 'done';
+  } else {
+    echo 'false';
+  }
 
 
 
