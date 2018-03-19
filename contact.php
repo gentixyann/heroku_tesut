@@ -20,11 +20,13 @@ require('dbconnect.php');
 
 //header("Location: contact.php");
 
+header("Location: contact.php");
+  }
 
 
-require 'vendor/autoload.php';
+  require 'vendor/autoload.php';
 
-$from = new SendGrid\Email("Black", "noreply@gmail.com");
+$from = new SendGrid\Email("Black", "naomi-noreply@google.com");
 $subject = "Hello World from the SendGrid PHP Library!";
 $to = new SendGrid\Email("Red", "wheview@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
@@ -38,10 +40,6 @@ $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
 echo $response->headers();
 echo $response->body();
-
-
-header("Location: contact.php");
-  }
 
 ?>
 
