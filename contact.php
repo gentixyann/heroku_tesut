@@ -47,7 +47,7 @@ $sg = new \SendGrid($apiKey);
 // echo $response->headers();
 // echo $response->body();
 
-
+$response = $sg->client->mail()->send()->post($mail);
 if ($response->statusCode() == 202) {
     // Successfully sent
     echo 'done';
