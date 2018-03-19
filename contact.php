@@ -48,6 +48,14 @@ echo $response->headers();
 echo $response->body();
 
 
+// if ($response->statusCode() == 202) {
+//     // Successfully sent
+//     echo 'done';
+//   } else {
+//     echo 'false';
+//   }
+
+
 
 // $sendgrid = new SendGrid(getenv('app90104884@heroku.com'), getenv('vlyyzhb21529'));
 // $email = new SendGrid\Email();
