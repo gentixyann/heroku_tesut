@@ -24,12 +24,13 @@ require('dbconnect.php');
 
 require 'vendor/autoload.php';
 
-$from = new SendGrid\Email(null, "noreply@gmail.com");
+$from = new SendGrid\Email("Black", "noreply@gmail.com");
 $subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "wheview@gmail.com");
+$to = new SendGrid\Email("Red", "wheview@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
+
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
 $apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
 
