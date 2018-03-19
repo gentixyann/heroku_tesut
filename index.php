@@ -80,7 +80,6 @@ function trans($word,$lang){
     <div class="container">
 <div class="header-container header">
     <div class="header-right">
-        <a class="navbar-item" href="contact.php">Contact</a>
         <a class="navbar-item" href="index.php?lang=ja">
             <?php echo trans("ja",$lang); ?>
         </a>

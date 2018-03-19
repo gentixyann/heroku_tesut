@@ -18,6 +18,26 @@ require('dbconnect.php');
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
 
+
+    require('sendgrid.php');
+      
+      $FROM_EMAIL = $email;
+  // they dont like when it comes from @gmail, prefers business emails
+  $TO_EMAIL = 'wheview@gmail.com';
+  // Try to be nice. Take a look at the anti spam laws. In most cases, you must
+  // have an unsubscribe. You also cannot be misleading.
+  $subject = $title;
+  $from = new SendGrid\Email(null, $FROM_EMAIL);
+  $to = new SendGrid\Email(null, $TO_EMAIL);
+  $textContent = $inquiries;
+  // Create Sendgrid content
+  $content = new SendGrid\Content("text/plain",$textContent);
+  // Create a mail object
+  $mail = new SendGrid\Mail($from, $subject, $to, $content);
+  
+  $sg = new \SendGrid($API_KEY);
+  $response = $sg->client->mail()->send()->post($mail);
+
 header("Location: contact.php");
   }
 
