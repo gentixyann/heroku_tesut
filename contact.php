@@ -9,11 +9,11 @@ require('dbconnect.php');
     $email = $_POST["email"];
     $inquiries = $_POST["inquiries"];
     $title = $_POST["title"];
-    $member_id = $_SESSION['id'];
+    //$member_id = $_SESSION['id'];
 
     
-      $sql = "INSERT INTO `whereis_contact`(`member_id`, `nick_name`, `email`, `title`, `inquiries`, `created`) 
-      VALUES ($member_id, '$nick_name', '$email', '$title', '$inquiries', now())";
+      $sql = "INSERT INTO `whereis_contact`(`nick_name`, `email`, `title`, `inquiries`, `created`) 
+      VALUES ('$nick_name', '$email', '$title', '$inquiries', now())";
       $data = array($nick_name, $email, $title, $inquiries);
       $stmt = $dbh->prepare($sql);
       $stmt->execute();
@@ -21,7 +21,7 @@ require('dbconnect.php');
 
     require('sendgrid.php');
       
-      $FROM_EMAIL = $email;
+  $FROM_EMAIL = $email;
   // they dont like when it comes from @gmail, prefers business emails
   $TO_EMAIL = 'wheview@gmail.com';
   // Try to be nice. Take a look at the anti spam laws. In most cases, you must
