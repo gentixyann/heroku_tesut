@@ -79,14 +79,7 @@ function trans($word,$lang){
 
     <div class="container">
 <div class="header-container header">
-    <div class="header-right">
-        <a class="navbar-item" href="index.php?lang=ja">
-            <?php echo trans("ja",$lang); ?>
-        </a>
-        <a class="navbar-item" href="index.php?lang=en">
-            <?php echo trans("en",$lang); ?>
-        </a>
-    </div><!--end of header-right-->
+    
 </div><!--end of header-->
 
         <div class="hero row">
@@ -106,7 +99,7 @@ function trans($word,$lang){
                   </a>
 
                         <div id="forget_pw">
-                            <p>投稿にはログインが必要だぜ</p>
+                            <p>You need to login if you want to post</p>
                         </div>
 
                         <div class="hr">

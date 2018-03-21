@@ -31,8 +31,31 @@ try{
 
   }
 
-if(isset($_SESSION["lang"])){
-    $lang = $_SESSION["lang"];
+// if(isset($_SESSION["lang"])){
+//     $lang = $_SESSION["lang"];
+
+// function trans($word,$lang){
+//   //翻訳ファイルを読み込み
+//   require("lang/words_".$lang.".php");
+
+//   //配列からデータを取得
+//   $trans_word = $word_list[$word];
+
+//   //文字を返す
+//   return $trans_word;
+// }
+// }
+
+
+
+$lang = "en";
+
+if (isset($_GET["lang"])){
+  $_SESSION["lang"] = $_GET["lang"];
+  $lang = $_SESSION["lang"];
+}else{
+    $_SESSION["lang"] =  $lang;
+}
 
 function trans($word,$lang){
   //翻訳ファイルを読み込み
@@ -43,7 +66,6 @@ function trans($word,$lang){
 
   //文字を返す
   return $trans_word;
-}
 }
 ?>
 
@@ -69,6 +91,10 @@ function trans($word,$lang){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
+<div id="inr">
+      <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
+      <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
+</div>
 
 <header>
        <a class="navbar-brand logo" href="index.php"></a>
