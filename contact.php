@@ -190,7 +190,7 @@ header("Location: contact.php");
                 <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
                 <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
             <span class="webscope-text"> The world view by </span>
-            <a href="index.php,,"> <img src="img/logo04.png"/> </a>
+            <a href="json_map.php"> <img src="img/logo04.png"/> </a>
           </div>
         <div class="col-sm-2"></div>
       </div>
