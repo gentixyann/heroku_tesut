@@ -7,6 +7,27 @@ body {
     margin-top: 0;
     height: 100%;
 }
+.adjust-box {
+    position: relative;
+    /*width: 50%;*/
+    height: auto;
+}
+.box-1x1:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.inner {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.adjust-box p {
+   /* font-size:1.25vw;*/
+    line-height:1.5em;
+}
 
 /*header {
     margin-top: 0;
@@ -18,8 +39,8 @@ body {
 }*/
 
 iframe {
-  width: 240px !important;
-  height: 135px !important;
+  width: 240px ;
+  height: 135px ;
 }
 
 .profile_title{
@@ -38,22 +59,19 @@ iframe {
     color:#fff;
 }
 
-.messages-table {
-    margin-top: 100px;
-}
-
 .messages {
+    box-sizing: border-box;
     float: left;
     text-align: center;
-    /*padding-top: 20px;*/
-    /*padding-bottom: 20px;*/
+    padding: 20px;
+    padding-bottom: 70px;
     border: 1px solid #eee;
     margin: 40px;
     /*background: #000000;*/
     /*padding: 20px;*/
     border-radius: 5px;
     color:#696969;
-    margin-bottom:30px;
+    margin-bottom:10px;
 }
 .messages-top {
     width: 250px;

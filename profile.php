@@ -66,7 +66,7 @@ require('dbconnect.php');
 
     <title>My Page</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">  
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/profile_tmp.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -112,7 +112,6 @@ require('dbconnect.php');
               <p><?php echo $login_member["email"]; ?></p>
             </div>
           </div>
-
         </form>
       </div>
    </div>
@@ -127,33 +126,32 @@ require('dbconnect.php');
       <div class="messages-table">
         <div class="messages text-center">
           <div class="messages-top">
+          <div class="adjust-box box-1x1">
+          <div class="inner">
               <br>
-
                 <div> <?php echo $one_movie["movie_info"]; ?></div>
-                
-
                 <form id="delete" method="post">
-                  <a><?php echo $one_movie["address"];?></a>
+                  <p><?php echo $one_movie["address"];?><p>
                   <!-- 投稿日時 -->
-                  <a>
-                  <?php
+                  <p><?php
                   $created_date = $one_movie["created"];
                   //strtotime 文字型のデータを日時型に変換できる
                   //(Y年m月d日 と記述することも可能)(H24時間表記、h12時間表記)
                   $created_date = date("Y-m-d H:i",strtotime($created_date));
                   echo $created_date;
-                  ?>
-                  </a><br>
+                  ?></p>
 
                     <input type="hidden" name="delete" value="<?php echo $one_movie["id"] ; ?>" >
-                    <input type="submit" class="delete" value="delete">
-
+                    <button type="submit" class="delete btn btn-default">delete</button>
+                    <!-- <input type="submit" class="delete" value="delete"> -->
                   <br><br>
                 </form>
           </div>
         </div>
       </div>
-      <?php }?>
+    </div>
+  </div>
+  <?php }?>
   </div>
 </div>
 
