@@ -146,7 +146,7 @@ require('dbconnect.php');
                   </a><br>
 
                     <input type="hidden" name="delete" value="<?php echo $one_movie["id"] ; ?>" >
-                    <input type="submit" class="delete" value="削除">
+                    <input type="submit" class="delete" value="delete">
 
                   <br><br>
                 </form>
