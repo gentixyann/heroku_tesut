@@ -176,11 +176,11 @@ function jsonRequest(json){
     };
   }
 
-    var map; 
-    var marker = ""; 
-    var randomLat = Math.random()*140 - 70; 
-    var randomLng = Math.random()*360 - 180; 
-    var input = document.getElementById('pac-input'); 
+    var map;
+    var marker = "";
+    var randomLat = Math.random()*140 - 70;
+    var randomLng = Math.random()*360 - 180;
+    var input = document.getElementById('pac-input');
     var searchBox = new google.maps.places.SearchBox(input);
 
 // マップを生成して、複数のマーカーを追加
@@ -263,7 +263,7 @@ function searchAddress(){
             markers.push(new google.maps.Marker({
               map: map,
               title: place.name,
-              zoom: 15,
+              zoom: 20,
               position: place.geometry.location
             }));
 
