@@ -188,7 +188,7 @@ function initialize(data/*Array*/){
 
 //この変数がmapのoption
   var op={
-    zoom:8,
+    zoom:20,
     //center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
      center:new google.maps.LatLng(randomLat.toFixed(6),randomLng.toFixed(6)),
     mapTypeId:google.maps.MapTypeId.ROADMAP
@@ -263,7 +263,7 @@ function searchAddress(){
             markers.push(new google.maps.Marker({
               map: map,
               title: place.name,
-              zoom: 20,
+              zoom: 15,
               position: place.geometry.location
             }));
 
