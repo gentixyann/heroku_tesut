@@ -82,6 +82,7 @@ function trans($word,$lang){
 <body>
  <div class="hero-background">
   <header> 
+   <a class="navbar-brand logo" href="index.php"></a>
     <div class=" topnav" id="myTopnav"> 
        <?php if (isset($_SESSION["id"])){ ?>
        <a href="logout.php">Logout</a>
