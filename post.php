@@ -193,8 +193,8 @@ function trans($word,$lang){
                 <div class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8 webscope">
-                        <span class="webscope-text"> The world view by </span>
-                        <a href=""> <img src="img/logo04.png"/> </a>
+                        <span class="webscope-text"> </span>
+                <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
                     </div>
                     <!--webscope-->
                     <div class="col-sm-2">

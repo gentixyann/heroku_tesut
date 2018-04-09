@@ -144,7 +144,9 @@ function trans($word,$lang){
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                      <?php echo trans("⑴まずここでログイン必要やから",$lang); ?> <br>
-                      <?php echo trans("⑵youtubeアカウントある？まずそっちにアップして。え？それがそもそもわからんって？これ見てガンバー",$lang); ?>&nbsp;&nbsp;<u>
+                      <?php echo trans("⑵youtubeアカウントある？まずそっちにアップして。え？それがそもそもわからんって？これ見てガンバー", 
+                      $lang); ?>&nbsp;&nbsp;
+                      <u>
                       <a href="https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=en" target="_blank" style="display:inline">Youtube Help</a></u>
                       <br>
                        <?php echo trans("⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて",$lang); ?><br>
@@ -179,7 +181,8 @@ function trans($word,$lang){
                       </div>
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
-                      <?php echo trans("Contact Usからお問い合わせしてね",$lang); ?><u><a href="contact.php" style="display:inline">Contact Us</a></u> 
+                      <u><a href="contact.php" style="display:inline">Contact Us</a></u>
+                      <?php echo trans("からお問い合わせしてね",$lang); ?> 
                       </div>
                       </div>
                       </div>
@@ -206,8 +209,8 @@ function trans($word,$lang){
            <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
                 <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
                 <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
-            <span class="webscope-text"> The world view by </span>
-            <a href=""> <img src="img/logo04.png"/> </a>
+            <span class="webscope-text"> </span>
+                <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
           </div>
         <div class="col-sm-2"></div>
       </div>

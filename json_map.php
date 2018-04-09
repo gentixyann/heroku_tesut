@@ -118,8 +118,8 @@ function trans($word,$lang){
                 <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
                 <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
                 <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
-                <span class="webscope-text"> The world view by </span>
-                <a href="json_map.php"> <img src="img/logo04.png"/> </a>
+                <span class="webscope-text"> </span>
+                <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
             </div>
             <!--webscope-->
             <div class="col-sm-2">

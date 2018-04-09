@@ -1,12 +1,8 @@
 <?php
   $word_list = 
-    array("Menu"=>"Menu",
-          "ja"=>"Japanese",
-          "en"=>"English",
+    array(
           "世界の景色をお手軽に"=>" You can see so easy the view of the world.",
          "投稿はここでしてね"=>"You can post here.",
-         "検索"=>"search",
-          "住所か地名ね"=>"address or place name",
           "ここで投稿できるよ"=>"You can post here",
          "緯度"=>"latitude",
          "経度"=>"longitude",
@@ -22,7 +18,7 @@
          "⑸動画埋め込みコードの所に貼り付けて、GO や！"=>"⑸Pasted on embed code, and GO！",
          "例えば、肖像権侵害と思われる動画を発見。通報と削除依頼をする場合は"=>"If you feel that someone is infrinfing your portrait, you can report it to us from ",
          "から申請をしてください。ただし、Youtubeから消えるわけではないのでご注意を。"=>"However, it doesn't remove from Youtube.",
-         "Contact Usからお問い合わせしてね"=>"Please ask us from Contact Us ");
+         "からお問い合わせしてね"=>"Please ask");
 
 
 ?>
