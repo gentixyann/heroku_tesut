@@ -111,7 +111,7 @@ function trans($word,$lang){
                         <div class="social" style="">
                            
                             <div class="g-signin2" data-onsuccess="onSignIn" 
-                                 data-width=220 data-height="50"  data-longtitle="true"></div>                  
+                                 data-width=240 data-height="50"  data-longtitle="true"></div>                  
                         </div>
                         
                     </div>
