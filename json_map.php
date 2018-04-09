@@ -299,16 +299,16 @@ function searchAddress(){
 
     // Set CSS for the control text
     //ボタン作ってる
-    var controlText = document.createElement('div');
-    controlText.style.margin = '5px';
-	controlText.style.width = '18px';
-  controlText.style.height = '18px';
-	controlText.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
-	controlText.style.backgroundSize = '180px 18px';
-	controlText.style.backgroundPosition = '0px 0px';
-	controlText.style.backgroundRepeat = 'no-repeat';
-	controlText.id = 'you_location_img';
-	controlUI.appendChild(controlText);
+  var controlText = document.createElement('div');
+    controlText.style.margin = '2px';
+  controlText.style.width = '28px';
+    controlText.style.height = '28px';
+    controlText.style.backgroundImage = 'url(img/gps10.png)';   
+    controlText.style.backgroundSize = '17px 17px';
+  controlText.style.backgroundPosition = '4px 4px';
+  controlText.style.backgroundRepeat = 'no-repeat';
+  controlText.id = 'you_location_img';
+  controlUI.appendChild(controlText);
 
     // Setup the click event listeners to geolocate user
     //controlUIクリックしたらgeolocate関数発動

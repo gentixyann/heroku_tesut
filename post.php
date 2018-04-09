@@ -395,32 +395,32 @@ function searchAddress(){
 
 function GeolocationControl(controlDiv, map) {
 
-        //createElementでdivを作る。その変数がcontrolUI。ボタンの箱作ってる
-        var controlUI = document.createElement('div');
-        controlUI.style.backgroundColor = '#fff';
-        controlUI.style.border = 'none';
-        controlUI.style.outline = 'none';
-        controlUI.style.width = '28px';
-        controlUI.style.height = '28px';
-        controlUI.style.borderRadius = '2px';
-        controlUI.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
-        controlUI.style.cursor = 'pointer';
-        controlUI.style.marginRight = '10px';
-        controlUI.style.padding = '0px';
-        controlUI.title = 'Your Location';
-        controlDiv.appendChild(controlUI);
+      //createElementでdivを作る。その変数がcontrolUI。ボタンの箱作ってる
+     var controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.border = 'none';
+    controlUI.style.outline = 'none';
+    controlUI.style.width = '28px';
+    controlUI.style.height = '28px';
+    controlUI.style.borderRadius = '2px';
+    controlUI.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3)';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginRight = '10px';
+    controlUI.style.padding = '0px';
+    controlUI.title = 'Your Location';
+    controlDiv.appendChild(controlUI);
 
-        //ボタン作ってる
-        var controlText = document.createElement('div');
-        controlText.style.margin = '5px';
-        controlText.style.width = '18px';　
-        controlText.style.height = '18px';
-        controlText.style.backgroundImage = 'url(https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png)';
-        controlText.style.backgroundSize = '180px 18px';
-        controlText.style.backgroundPosition = '0px 0px';
-        controlText.style.backgroundRepeat = 'no-repeat';
-        controlText.id = 'you_location_img';
-        controlUI.appendChild(controlText);
+    //ボタン作ってる
+    var controlText = document.createElement('div');
+    controlText.style.margin = '2px';
+    controlText.style.width = '28px';
+    controlText.style.height = '28px';
+    controlText.style.backgroundImage = 'url(img/gps10.png)';   
+    controlText.style.backgroundSize = '17px 17px';
+    controlText.style.backgroundPosition = '4px 4px';
+    controlText.style.backgroundRepeat = 'no-repeat';
+    controlText.id = 'you_location_img';
+    controlUI.appendChild(controlText);
 
         //controlUIクリックしたらgeolocate関数発動
         google.maps.event.addDomListener(controlUI, 'click', geolocate);
