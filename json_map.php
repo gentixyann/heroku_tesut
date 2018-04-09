@@ -188,7 +188,7 @@ function initialize(data/*Array*/){
 
 //この変数がmapのoption
   var op={
-    zoom:20,
+    zoom:8,
     //center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
      center:new google.maps.LatLng(randomLat.toFixed(6),randomLng.toFixed(6)),
     mapTypeId:google.maps.MapTypeId.ROADMAP
@@ -275,6 +275,7 @@ function searchAddress(){
             }
           });
           map.fitBounds(bounds);
+          map.setZoom(15);
         });
 }
 
@@ -330,6 +331,7 @@ function searchAddress(){
             });
             //座標をセット。１番目の引数には設定する中心座標
             map.setCenter(pos);
+            map.setZoom(15);
         });
     }else {
                //Geolocation API使えん

@@ -392,6 +392,7 @@ function searchAddress(){
             }
           });
           map.fitBounds(bounds);
+          map.setZoom(15);
         });
 }
 
@@ -446,6 +447,7 @@ function geolocate() {
 
                 //座標をセット。１番目の引数には設定する中心座標
                 map.setCenter(pos);
+                map.setZoom(15);
             });
         } else {
             //Geolocation API使えん
