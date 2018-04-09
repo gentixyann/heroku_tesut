@@ -188,32 +188,24 @@ function trans($word,$lang){
         <!-- Footer
   ================================================== -->
 
-       <div id="footer" class="footer">
+<div id="footer" class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-2"></div>
-          <div class="col-sm-8 webscope">
-           <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 webscope">
+                <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
                 <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
                 <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
-            <span class="webscope-text"> </span>
+                <span class="webscope-text"> </span>
                 <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
-          </div>
-        <div class="col-sm-2"></div>
-      </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
     </div>
-  </div>
+</div>
 
-
-
-
-
-
-
-        <!--footer-->
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="js/navi.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/navi.js"></script>
 
 <script type="text/javascript">
     var map;
