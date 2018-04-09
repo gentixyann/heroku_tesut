@@ -188,24 +188,28 @@ function trans($word,$lang){
         <!-- Footer
   ================================================== -->
 
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8 webscope">
-                        <span class="webscope-text"> </span>
+       <div id="footer" class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"></div>
+          <div class="col-sm-8 webscope">
+           <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
+                <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
+                <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
+            <span class="webscope-text"> </span>
                 <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
-                    </div>
-                    <!--webscope-->
-                    <div class="col-sm-2">
-                        <!--social-links-->
-                    </div>
-                    <!--social-links-parent-->
-                </div>
-                <!--row-->
-            </div>
-            <!--container-->
-        </div>
+          </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
         <!--footer-->
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
