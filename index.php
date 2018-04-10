@@ -1,6 +1,6 @@
 <?php
 session_start();
-//require_once('redirect.php');
+
 
 // DBに接続
   require('dbconnect.php');
@@ -75,7 +75,7 @@ function trans($word,$lang){
     <!-- Navigation
     ================================================== -->
 <div class="hero-background">
-    <img class="strips" src="earth.png">
+    <img class="strips" src="img/earth.png">
 
     <div class="container">
 <div class="header-container header">
