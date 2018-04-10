@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('redirect.php');
+//require_once('redirect.php');
 
 // DBに接続
   require('dbconnect.php');
