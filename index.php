@@ -126,8 +126,8 @@ function trans($word,$lang){
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY",
-    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw",  
+    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw", 
+    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY", 
     authDomain: "where-map-e3a10.firebaseapp.com",
     databaseURL: "https://where-map-e3a10.firebaseio.com",
     projectId: "where-map-e3a10",
