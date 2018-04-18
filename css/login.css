@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Ubuntu|Courgette);
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Courgette');
 @font-face {
   font-family: 'entypo';
   font-style: normal;
   font-weight: normal;
   src: url('https://weloveiconfonts.com/api/fonts/entypo/entypo.eot');
-  src: url('https://weloveiconfonts.com/api/fonts/entypo/entypo.eot?#iefix') format('eot'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.woff') format('woff'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.ttf') format('truetype'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.svg#entypo') format('svg');
+
+/*  src: url('https://weloveiconfonts.com/api/fonts/entypo/entypo.eot?#iefix') format('eot'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.woff') format('woff'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.ttf') format('truetype'), url('http://weloveiconfonts.com/api/fonts/entypo/entypo.svg#entypo') format('svg');*/
 }
 .entypo-note:before {
   content: "\266a";
@@ -891,7 +892,7 @@ body {
   transition: all 0s;
 }
 div.loginpanel {
-  
+
   width: 100%;
   max-width: 500px;
   padding: 20px;
@@ -1249,7 +1250,7 @@ div.loginpanel div.hr div:last-child {
 
 
 div.kaiintouroku {
-  
+
   width: 100%;
   max-width: 500px;
   padding: 20px;

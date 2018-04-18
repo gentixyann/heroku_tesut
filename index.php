@@ -55,7 +55,7 @@ function trans($word,$lang){
 
     <!--    Goodleのアカウント使用で必要-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    
+
 <style>
     .g-signin2 {
         width: 100%;
@@ -65,9 +65,9 @@ function trans($word,$lang){
         margin: 0 auto;
     }
 </style>
-    
-    
-    
+
+
+
 </head>
 
 
@@ -79,7 +79,7 @@ function trans($word,$lang){
 
     <div class="container">
 <div class="header-container header">
-    
+
 </div><!--end of header-->
 
         <div class="hero row">
@@ -93,7 +93,7 @@ function trans($word,$lang){
             <form method="POST" action="">
                 <div class="col-sm-6 col-sm-6 ">
                     <div class="loginpanel">
-                       
+
                         <a href="json_map.php" class="submit_button">
                   <input type="button" value="Visitor" class="submit_button">
                   </a>
@@ -107,27 +107,27 @@ function trans($word,$lang){
                             <div>OR</div>
                             <div></div>
                         </div>
-                                                               
+
                         <div class="social" style="">
-                           
-                            <div class="g-signin2" data-onsuccess="onSignIn" 
-                                 data-width=240 data-height="50"  data-longtitle="true"></div>                  
+
+                            <div class="g-signin2" data-onsuccess="onSignIn"
+                                 data-width=240 data-height="50"  data-longtitle="true"></div>
                         </div>
-                        
+
                     </div>
-                </div>        
+                </div>
             </form>
         </div><!--end of hero row-->
     </div><!--end of container-->
 </div><!--end of hero-background-->
-    
+
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-    
+
 <script>
   // Initialize Firebase
   var config = {
-    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw", 
-    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY", 
+    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw",
+    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY",
     authDomain: "where-map-e3a10.firebaseapp.com",
     databaseURL: "https://where-map-e3a10.firebaseio.com",
     projectId: "where-map-e3a10",
@@ -142,7 +142,7 @@ function trans($word,$lang){
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script type="text/javascript" src="js/google_login.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
 </body>
 

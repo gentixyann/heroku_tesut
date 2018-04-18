@@ -1,5 +1,5 @@
 <?php
-  $word_list = 
+  $word_list =
     array(
           "世界の景色をお手軽に"=>" You can see so easy the view of the world.",
          "投稿はここでしてね"=>"You can post here.",
@@ -16,10 +16,10 @@
          "⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて"=>"⑶ Click on the map at POST page, after that fill latitude and longitude in the location.",
          "⑷youtubeでアップしたい動画を右クリック（マックなら両指クリックの事な）んだら選択肢に「動画コード取得」があると思うから、それクリックな。んだらそれがコピーされるんや"=>"⑷Right click (if you use mac, it is double click ) on the video what you want to upload, So you can see options of get embed code, and click it. It is copied",
          "⑸動画埋め込みコードの所に貼り付けて、GO や！"=>"⑸Pasted on embed code, and GO！",
+         "詳しくはこちら→"=>"For more details->",
          "例えば、肖像権侵害と思われる動画を発見。通報と削除依頼をする場合は"=>"If you feel that someone is infrinfing your portrait, you can report it to us from ",
          "から申請をしてください。ただし、Youtubeから消えるわけではないのでご注意を。"=>"However, it doesn't remove from Youtube.",
          "からお問い合わせしてね"=>"Please ask");
 
 
 ?>
-

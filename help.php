@@ -24,7 +24,7 @@ function trans($word,$lang){
 
 
 <!doctype html>
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html class="no-js" lang="ja"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -33,8 +33,8 @@ function trans($word,$lang){
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Help</title>
-   
-   
+
+
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/magnific-popup.css"> -->
@@ -91,7 +91,7 @@ function trans($word,$lang){
 
 <header>
    <a class="navbar-brand logo" href="index.php"></a>
-    <div class=" topnav" id="myTopnav"> 
+    <div class=" topnav" id="myTopnav">
        <?php if (isset($_SESSION["id"])){ ?>
        <a href="logout.php">Logout</a>
        <a href="profile.php">MyPage</a>
@@ -111,12 +111,12 @@ function trans($word,$lang){
           <div class="center-block">
             <div class="head_title">
               <legend class="profile_title">HELP</legend>
-              
+
             </div>
                 <div class="single_choose">
                   <div class="single_choose_acording">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                      
+
                       <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
@@ -128,11 +128,11 @@ function trans($word,$lang){
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                        <?php echo trans("俺たちの遊び。",$lang); ?> <br>
-                      <?php echo trans("ここってどんなところなんやろー？もしかしたらその疑問に答えてくれるかもしれないもの。",$lang); ?> 
+                      <?php echo trans("ここってどんなところなんやろー？もしかしたらその疑問に答えてくれるかもしれないもの。",$lang); ?>
                       </div>
                       </div>
                       </div>
-                                          
+
                       <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
@@ -144,18 +144,19 @@ function trans($word,$lang){
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                      <?php echo trans("⑴まずここでログイン必要やから",$lang); ?> <br>
-                      <?php echo trans("⑵youtubeアカウントある？まずそっちにアップして。え？それがそもそもわからんって？これ見てガンバー", 
+                      <?php echo trans("⑵youtubeアカウントある？まずそっちにアップして。え？それがそもそもわからんって？これ見てガンバー",
                       $lang); ?>&nbsp;&nbsp;
                       <u>
                       <a href="https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=en" target="_blank" style="display:inline">Youtube Help</a></u>
                       <br>
                        <?php echo trans("⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて",$lang); ?><br>
                       <?php echo trans("⑷youtubeでアップしたい動画を右クリック（マックなら両指クリックの事な）んだら選択肢に「動画コード取得」があると思うから、それクリックな。んだらそれがコピーされるんや",$lang); ?><br>
-                      <?php echo trans("⑸動画埋め込みコードの所に貼り付けて、GO や！",$lang); ?>
+                      <?php echo trans("⑸動画埋め込みコードの所に貼り付けて、GO や！",$lang); ?><br>
+                      <?php echo trans("詳しくはこちら→",$lang); ?><br>
                       </div>
                       </div>
                       </div>
-                                  
+
                       <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
@@ -170,7 +171,7 @@ function trans($word,$lang){
                       </div>
                       </div>
                       </div>
-                      
+
                       <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
@@ -182,7 +183,7 @@ function trans($word,$lang){
                       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: auto;">
                       <div class="panel-body">
                       <u><a href="contact.php" style="display:inline">Contact Us</a></u>
-                      <?php echo trans("からお問い合わせしてね",$lang); ?> 
+                      <?php echo trans("からお問い合わせしてね",$lang); ?>
                       </div>
                       </div>
                       </div>
@@ -191,11 +192,11 @@ function trans($word,$lang){
                   </div>
                 </div>
         </div>
-        
+
         <div>
             <div class="center-block" id="map"></div>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -216,7 +217,7 @@ function trans($word,$lang){
       </div>
     </div>
   </div>
-  
+
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
  <script src="js/navi.js"> </script>
