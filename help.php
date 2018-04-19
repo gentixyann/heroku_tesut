@@ -152,7 +152,9 @@ function trans($word,$lang){
                        <?php echo trans("⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて",$lang); ?><br>
                       <?php echo trans("⑷youtubeでアップしたい動画を右クリック（マックなら両指クリックの事な）んだら選択肢に「動画コード取得」があると思うから、それクリックな。んだらそれがコピーされるんや",$lang); ?><br>
                       <?php echo trans("⑸動画埋め込みコードの所に貼り付けて、GO や！",$lang); ?><br>
-                      <?php echo trans("詳しくはこちら→",$lang); ?><br>
+                      <?php echo trans("詳しくはこちら→",$lang); ?>&nbsp;&nbsp;
+                      <u>
+                      <a href="https://www.youtube.com/watch?v=QYYfzBJNJZg&feature=youtu.be" target="_blank" style="display:inline">How to post</a></u><br>
                       </div>
                       </div>
                       </div>
