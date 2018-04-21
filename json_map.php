@@ -58,6 +58,15 @@ function trans($word,$lang){
 <!doctype html>
 <html lang="ja">
 <head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NVT76Q6');</script>
+  <!-- End Google Tag Manager -->
+
     <meta charset="utf-8" />
     <title>Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -74,7 +83,7 @@ function trans($word,$lang){
     <script type="text/javascript" src="js/footerFixed.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="js/analyticstracking.js"></script> -->
+    <script src="js/analyticstracking.js"></script>
 </head>
 
 
@@ -101,6 +110,11 @@ function trans($word,$lang){
 </header>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVT76Q6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
         <input id="pac-input" class="controls" type="text" placeholder="Search">
