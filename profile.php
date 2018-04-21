@@ -72,9 +72,11 @@ require('dbconnect.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/hero.css" />
+
     <script type="text/javascript" src="js/footerFixed.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/analyticstracking.js"></script>
 </head>
 <body>
 

@@ -74,6 +74,7 @@ function trans($word,$lang){
     <script type="text/javascript" src="js/footerFixed.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/analyticstracking.js"></script>
 </head>
 
 
@@ -303,7 +304,7 @@ function searchAddress(){
     controlText.style.margin = '2px';
   controlText.style.width = '28px';
     controlText.style.height = '28px';
-    controlText.style.backgroundImage = 'url(img/gps10.png)';   
+    controlText.style.backgroundImage = 'url(img/gps10.png)';
     controlText.style.backgroundSize = '17px 17px';
   controlText.style.backgroundPosition = '4px 4px';
   controlText.style.backgroundRepeat = 'no-repeat';

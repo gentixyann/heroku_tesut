@@ -55,6 +55,7 @@ function trans($word,$lang){
 
     <!--    Goodleのアカウント使用で必要-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/analyticstracking.js"></script>
 
 <style>
     .g-signin2 {
@@ -65,8 +66,6 @@ function trans($word,$lang){
         margin: 0 auto;
     }
 </style>
-
-
 
 </head>
 

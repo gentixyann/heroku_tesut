@@ -11,8 +11,8 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
      $lng = trim($_POST['lng']);
      $iframe = trim($_POST['iframe']);
     $address = trim($_POST['address']);
-    
-    
+
+
   try{
 //DBに動画情報を登録するSQL文
   //now() MySQLが用意した関数。現在日時を取得。
@@ -20,7 +20,7 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
   `movie_info`, `address`, `created`)
    VALUES ('$member_id', '$lat','$lng','$iframe','$address',now() )";
 
-      
+
   //SQL文実行
    //sha1 暗号化行う関数
    $data = array($member_id, $lat, $lng, $iframe, $address);
@@ -77,13 +77,14 @@ function trans($word,$lang){
     <!-- Google Maps API読み込み -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/analyticstracking.js"></script>
 </head>
 
 <body>
  <div class="hero-background">
-  <header> 
+  <header>
    <a class="navbar-brand logo" href="index.php"></a>
-    <div class=" topnav" id="myTopnav"> 
+    <div class=" topnav" id="myTopnav">
        <?php if (isset($_SESSION["id"])){ ?>
        <a href="logout.php">Logout</a>
        <a href="profile.php">MyPage</a>
@@ -92,9 +93,9 @@ function trans($word,$lang){
        <a href="help.php">Help</a>
        <a href="json_map.php">*MAP*</a>
       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>  
+    </div>
   </header>
-  
+
 <div class="container">
     <div class="hero row">
         <div class="row">
@@ -238,13 +239,13 @@ function trans($word,$lang){
             position: latlng,
             map: map
         });
-        
+
      //住所検索のinputをmapの中に表示
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
       map.addListener('bounds_changed', function(){
       searchAddress()
      })
-        
+
         //地図上でクリックするとマーカー登場。マーカーを移動可能にするイベント登録
         google.maps.event.addListener(map, 'click',
             function(event) {
@@ -343,8 +344,8 @@ function trans($word,$lang){
         //現在地ボタン
         map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(geolocationDiv);
 
-    } //end of initialize()   
-    
+    } //end of initialize()
+
     //住所検索の関数
 function searchAddress(){
         searchBox.setBounds(map.getBounds());
@@ -415,7 +416,7 @@ function GeolocationControl(controlDiv, map) {
     controlText.style.margin = '2px';
     controlText.style.width = '28px';
     controlText.style.height = '28px';
-    controlText.style.backgroundImage = 'url(img/gps10.png)';   
+    controlText.style.backgroundImage = 'url(img/gps10.png)';
     controlText.style.backgroundSize = '17px 17px';
     controlText.style.backgroundPosition = '4px 4px';
     controlText.style.backgroundRepeat = 'no-repeat';
@@ -459,7 +460,7 @@ function review() {
         } else {
             document.getElementById("svp").style.display = "block";
         }
-        //ストリートビューパノラマ表示 
+        //ストリートビューパノラマ表示
         var svp = new google.maps.StreetViewPanorama(
             document.getElementById(objname), {
                 position: map.getCenter()
@@ -475,7 +476,7 @@ function chk() {
             }
         }
     }
-    // ロード時に初期化 
+    // ロード時に初期化
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 

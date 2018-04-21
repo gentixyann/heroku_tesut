@@ -70,7 +70,6 @@ function trans($word,$lang){
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3qe_lcSnHCs7ENLJM9sMEHnxNABZb04&callback=initMap"
            async defer></script>
 
-
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -86,6 +85,7 @@ function trans($word,$lang){
         padding: 0;
       }
     </style>
+    <script src="js/analyticstracking.js"></script>
 </head>
 <body>
 
