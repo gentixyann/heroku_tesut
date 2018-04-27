@@ -96,9 +96,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Navigation
     ================================================== -->
 <div class="hero-background">
-  <div id="fullscreen">
+  
     <img class="strips" src="img/earth.png">
-  </div>
+  
     <div class="container">
 <div class="header-container header">
 
