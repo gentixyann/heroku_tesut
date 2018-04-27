@@ -14,7 +14,6 @@ if (isset($_GET["lang"])){
     $_SESSION["lang"] =  $lang;
 }
 
-
 function trans($word,$lang){
   //翻訳ファイルを読み込み
   require("lang/words_".$lang.".php");
@@ -97,8 +96,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Navigation
     ================================================== -->
 <div class="hero-background">
+  <div id="fullscreen">
     <img class="strips" src="img/earth.png">
-
+  </div>
     <div class="container">
 <div class="header-container header">
 
