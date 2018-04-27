@@ -514,6 +514,8 @@ ul {
 
 .strips {
     position: absolute;
+    width: 100%;
+    height: 100%;
 /*    max-width: 1280px;*/
     background-size: cover;
 
