@@ -120,7 +120,7 @@ function trans($word,$lang){
                       <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
                      <a class="collapsed">
-                      <i class="fa fa-bullseye"></i>WHAT IS  " WHERE IS * " ?
+                      <i class="fa fa-bullseye"></i>What is the "WheView" ?
                           </a>
                       </h4>
                       </div>
