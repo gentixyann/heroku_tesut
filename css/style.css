@@ -499,7 +499,21 @@ ul {
 
 .strips {
     position: absolute;
+    width: 100%;
+    height: 100%;
+/*    max-width: 1280px;*/
+    background-size: cover;
+
+    /* 背景画像が読み込まれる前に表示される背景のカラー */
+    background-color: #464646;
+}
+
+
+/*
+.strips {
+    position: absolute;
     width: 100% ;
     height: 100vh;
     background-size: cover;
 }
+*/
