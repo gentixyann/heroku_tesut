@@ -1,2 +1,5 @@
 User-agent: *
+
+
 Sitemap: https://www.wheview.net/sitemap.xml
+
