@@ -38,7 +38,7 @@ function trans($word,$lang){
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/magnific-popup.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    
     <!--For Plugins external css-->
     <!-- <link rel="stylesheet" href="assets/css/plugins.css" /> -->
     <!--Theme custom css -->
@@ -151,12 +151,16 @@ function trans($word,$lang){
                        <?php echo trans("⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて",$lang); ?><br>
                       <?php echo trans("⑷youtubeでアップしたい動画を右クリック（マックなら両指クリックの事な）んだら選択肢に「動画コード取得」があると思うから、それクリックな。んだらそれがコピーされるんや",$lang); ?><br>
                       <?php echo trans("⑸動画埋め込みコードの所に貼り付けて、GO や！",$lang); ?><br>
-                      <?php echo trans("詳しくはこちら→",$lang); ?>&nbsp;&nbsp;
-                      <u>
-                      <a href="https://www.youtube.com/watch?v=QYYfzBJNJZg&feature=youtu.be" target="_blank" style="display:inline">How to post</a></u><br>
+                      
+                      </div>
+
+                      <div class="youtube">
+                      <iframe width="640" height="360" src="https://www.youtube.com/embed/QYYfzBJNJZg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+
                       </div>
                       </div>
-                      </div>
+
 
                       <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne">
