@@ -155,7 +155,7 @@ function trans($word,$lang){
                       </div>
 
                       <div class="youtube">
-                      <iframe width="640" height="360" src="https://www.youtube.com/embed/QYYfzBJNJZg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      <iframe width="600" height="320" src="https://www.youtube.com/embed/QYYfzBJNJZg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
 
                       </div>
