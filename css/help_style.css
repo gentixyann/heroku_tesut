@@ -33,7 +33,8 @@ body {
   padding-top: 56.25%;
 }
 .youtube iframe {
-  position: absolute;
+  /*position: absolute;*/
+  position: center;
   top: 0;
   right: 0;
   width: 100% !important;
