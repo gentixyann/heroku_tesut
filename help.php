@@ -34,23 +34,15 @@ function trans($word,$lang){
 
     <title>Help</title>
 
-
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/magnific-popup.css"> -->
-    
-    <!--For Plugins external css-->
-    <!-- <link rel="stylesheet" href="assets/css/plugins.css" /> -->
-    <!--Theme custom css -->
     <link rel="stylesheet" href="css/help_style.css">
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="css/help_responsive.css" >
-    <!-- <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
-    <script type="text/javascript" src="js/footerFixed.js"></script>
-        <!-- header -->
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/hero.css" />
 
+    <script type="text/javascript" src="js/footerFixed.js"></script>
 
     <script>
     //Google Maps
@@ -60,7 +52,7 @@ function trans($word,$lang){
       var randomLng = Math.random()*360 - 180;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          //center: {lat: -34.397, lng: 150.644},
+          //初期表示時の固定 center: {lat: -34.397, lng: 150.644},
           center: {lat: randomLat, lng: randomLng},
           zoom: 3
         });
@@ -151,7 +143,6 @@ function trans($word,$lang){
                        <?php echo trans("⑶投稿画面のマップクリックして、撮影地の緯度経度を調べて入れて",$lang); ?><br>
                       <?php echo trans("⑷youtubeでアップしたい動画を右クリック（マックなら両指クリックの事な）んだら選択肢に「動画コード取得」があると思うから、それクリックな。んだらそれがコピーされるんや",$lang); ?><br>
                       <?php echo trans("⑸動画埋め込みコードの所に貼り付けて、GO や！",$lang); ?><br>
-                      
                       </div>
 
                       <div class="youtube">
