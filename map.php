@@ -87,19 +87,18 @@ function trans($word,$lang){
 </head>
 
 
-
-
-<div id="inr">
-    <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
-    <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
-</div>
-
-
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVT76Q6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<div class="fullheight">
+
+<div id="inr">
+    <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
+    <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
+</div>
 
 <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
@@ -110,6 +109,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div id="gmap_wrapper">
   <div id="map_canvas"></div>
     </div>
+
+  </div>
 
 
 
