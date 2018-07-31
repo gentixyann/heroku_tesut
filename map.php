@@ -169,6 +169,8 @@ function initialize(data/*Array*/){
     zoom:8,
     //center:new google.maps.LatLng(34.67347038699344,135.44394850730896),
      center:new google.maps.LatLng(randomLat.toFixed(6),randomLng.toFixed(6)),
+     // １本指で操作するためのコード
+     gestureHandling: 'greedy',
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 
