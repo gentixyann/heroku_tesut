@@ -80,7 +80,7 @@ function trans($word,$lang){
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/searchAddress.css" />
 
-  
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/analyticstracking.js"></script>
@@ -95,15 +95,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="fullheight">
 
+<div class="row">
+        <input id="pac-input" class="controls" type="text" placeholder="Search">
+</div>
+
 <div id="inr">
     <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
     <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
-</div>
-
-<div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-        <input id="pac-input" class="controls" type="text" placeholder="Search">
-    </div>
 </div>
 
  <div id="gmap_wrapper">
