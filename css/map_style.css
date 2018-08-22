@@ -18,6 +18,7 @@ width:100%;
 /*padding-top:50%;*/
 position: relative;
 margin:auto;
+/*画面topに隙間がある分、画面外の下にずれる*/
 height: 97%;
 }
 
