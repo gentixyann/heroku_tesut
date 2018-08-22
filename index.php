@@ -114,8 +114,6 @@ function jsonRequest(json){
 }
 
 
-
-//    console = null; // warningを表示しないようnullで(ry
   var currentInfoWindow = null;
 
   function createClickCallback(marker, infoWindow) {
