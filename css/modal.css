@@ -17,7 +17,7 @@
     z-index: 998;
     position: fixed;
     width: 90%;
-    height: 80%;
+    height: 340px;
     border-radius: 20px;
     left: 50%;
     top: 50%;
@@ -30,6 +30,7 @@
     padding: 10px 20px;
     overflow: hidden;
 }
+
 @media (min-width: 768px) {/* PCのときはページの真ん中の600x600領域 */
 .popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label + .modalPopup2{
          width: 600px;
