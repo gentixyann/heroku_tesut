@@ -57,6 +57,7 @@ try{
     <link rel="stylesheet" type="text/css" href="css/map_style.css">
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/searchAddress.css" />
+    <link rel="stylesheet" href="css/modal.css" />
 
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
@@ -73,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="fullheight">
-  
+
   <div class="popupModal1">
    <input type="radio" name="modalPop" id="pop11" />
    <label for="pop11">クリックでポップアップ</label>
