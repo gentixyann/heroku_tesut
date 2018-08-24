@@ -71,20 +71,34 @@ try{
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+
 <div class="fullheight">
+  
+  <div class="popupModal1">
+   <input type="radio" name="modalPop" id="pop11" />
+   <label for="pop11">クリックでポップアップ</label>
+   <input type="radio" name="modalPop" id="pop12" />
+   <label for="pop12">CLOSE</label>
+   <input type="radio" name="modalPop" id="pop13" />
+   <label for="pop13">×</label>
+   <div class="modalPopup2">
+    <div class="modalPopup3">
+     <div class="modalTitle">We're waiting for new friends.</div>
+     <div class="modalMain">
+       <img id="facebook" src="img/f-ogo_RGB_HEX-58.png">
+      <img id="instagram" src="img/instagram_PNG9.png">
+      <img id="youtube" src="img/yt_logo.png">
+     </div>
+    </div>
+   </div>
+  </div>
 
-        <input id="pac-input" class="controls" type="text" placeholder="Search">
-
-<div id="inr">
-    <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
-    <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
-</div>
+    <input id="pac-input" class="controls" type="text" placeholder="Search">
 
  <div id="gmap_wrapper">
   <div id="map_canvas"></div>
     </div>
-
-  </div>
+</div>
 
 
 

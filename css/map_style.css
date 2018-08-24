@@ -19,7 +19,7 @@ width:100%;
 position: relative;
 margin:auto;
 /*画面topに隙間がある分、画面外の下にずれる*/
-height: 97%;
+height: 95.5%;
 }
 
 #map_canvas{
