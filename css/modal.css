@@ -9,6 +9,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
+    margin-top: 0.5%;
 }
 .modalPopup2 { /* 初期設定 ポップアップ非表示 */
     display: none;
