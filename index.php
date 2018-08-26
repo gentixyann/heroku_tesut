@@ -47,13 +47,11 @@ try{
     <meta charset="utf-8" />
     <title>Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" type="text/css" href="css/map_style.css">
+    <link rel="stylesheet" href="css/map_style.css">
     <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/searchAddress.css" />
     <link rel="stylesheet" href="css/modal.css" />
@@ -75,14 +73,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="popupModal1">
    <input type="radio" name="modalPop" id="pop11" />
-   <label for="pop11">クリックでポップアップ</label>
+<label for="pop11">
+     <span class="fa-stack fa-lg">
+       <i class="fas fa-bars"></i>
+     </span>
+ </label>
+
    <input type="radio" name="modalPop" id="pop12" />
    <label for="pop12">CLOSE</label>
    <input type="radio" name="modalPop" id="pop13" />
    <label for="pop13">×</label>
    <div class="modalPopup2">
     <div class="modalPopup3">
-     <div class="modalTitle">We're waiting for new friends.</div>
+     <div class="modalTitle">Cameraperson wanted</div>
      <div class="modalMain">
        <img id="facebook" src="img/f-ogo_RGB_HEX-58.png">
       <img id="instagram" src="img/instagram_PNG9.png">
