@@ -74,9 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="popupModal1">
    <input type="radio" name="modalPop" id="pop11" />
 <label for="pop11">
-     <span class="fa-stack fa-lg">
-       <i class="fas fa-bars"></i>
-     </span>
+       <i class="fas fa-bars fa-lg"></i>
  </label>
 
    <input type="radio" name="modalPop" id="pop12" />
