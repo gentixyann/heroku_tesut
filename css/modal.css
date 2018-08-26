@@ -7,6 +7,8 @@
 }
 .popupModal1 > input:nth-child(1) + label {
     cursor: pointer;
+    display: block;
+    text-align: center;
 }
 .modalPopup2 { /* 初期設定 ポップアップ非表示 */
     display: none;
