@@ -25,7 +25,7 @@ try{
     $json = json_encode($marker_info, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
         //var_dump($json);
    }
-     }
+  }
 
 }catch(Exception $e){
 
@@ -50,9 +50,7 @@ try{
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/map_style.css">
-    <link rel="stylesheet" href="css/navi.css" />
     <link rel="stylesheet" href="css/searchAddress.css" />
     <link rel="stylesheet" href="css/modal.css" />
 
@@ -315,6 +313,5 @@ function searchAddress(){
 }
 
 </script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>
