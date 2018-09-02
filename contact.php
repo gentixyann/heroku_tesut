@@ -19,7 +19,7 @@ require('dbconnect.php');
       $stmt->execute();
 
 
-    require('sendgrid.php');
+    require('sendgrid/sendgrid.php');
       
   $FROM_EMAIL = $email;
   // they dont like when it comes from @gmail, prefers business emails
