@@ -132,6 +132,7 @@ require('dbconnect.php');
           <div class="inner">
               <br>
                 <div> <?php echo $one_movie["movie_info"]; ?></div>
+                <div> <?php echo $one_movie["id"]; ?></div>
                 <form id="delete" method="post">
                   <p><?php echo $one_movie["address"];?><p>
                   <!-- 投稿日時 -->
