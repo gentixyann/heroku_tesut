@@ -95,7 +95,7 @@ function trans($word,$lang){
 </div>
 
 <header>
-    <a class="navbar-brand logo" href="index.php"></a>
+      <a class="navbar-brand logo" href="login_google.php"></a>
 
     <div class=" topnav" id="myTopnav">
         <?php if (isset($_SESSION["id"])){ ?>
