@@ -226,6 +226,7 @@ function initialize(data/*Array*/){
             content:'<div class="infoWindow">'+
             //dat.movie_infoはDBのカラム名
              '<p>'+dat.movie_info+'</p>'+
+             '<p>'+dat.id+'</p>'+
              '</div>'
         });
          google.maps.event.addListener(marker, 'click', createClickCallback(marker, infoWindow));
