@@ -124,6 +124,7 @@ function trans($word,$lang){
             </div>
             <input type="hidden" id="map_address" name="address">
             <button type="submit" class="btn btn-primary">Go</button>
+            <input class="btn btn-success" id="rg_submit" type="button" value="Reverse Geocode">
         </form>
         <p>
             <label for="svp_2">
@@ -216,6 +217,8 @@ function trans($word,$lang){
     var randomLng = Math.random() * 360 - 180;
     var input = document.getElementById('pac-input');
     var searchBox = new google.maps.places.SearchBox(input);
+    var infowindow = new google.maps.InfoWindow;
+    var markers = [];
     /* 初期設定 */
     function initialize() {
         var Marker;
@@ -334,17 +337,61 @@ function trans($word,$lang){
             //document.getElementById('id_keido').innerHTML = keido;
         };
 
+        //reverse geocodingの発火
+        document.getElementById('rg_submit').addEventListener('click', function() {
+          geocodeLatLng(geocoder, map, infowindow);
+        });
+
         var geocoder = new google.maps.Geocoder();
 
         //createElementでdivを生成。
         var geolocationDiv = document.createElement('div');
         //GeolocationControlで現在地とる。jsのAPI
-        var geolocationControl = new GeolocationControl(geolocationDiv, map);
+        var geolocationControl = new GeolocationControl(geolocationDiv, map, infowindow);
 
         //現在地ボタン
         map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(geolocationDiv);
 
     } //end of initialize()
+
+
+
+//reverse geocodingの関数
+      function geocodeLatLng(geocoder, map, infowindow) {
+      // Clear out the old markers.
+      markers.forEach(function(marker) {
+        marker.setMap(null);
+      });
+      markers = [];
+        var input_lat = document.getElementById('map_lat').value;
+        var input_lng = document.getElementById('map_lng').value;
+
+        //var latlngStr = input.split(',', 2);
+
+        var latlng = {lat: parseFloat(input_lat), lng: parseFloat(input_lng)};
+        geocoder.geocode({'location': latlng}, function(results, status) {
+          if (status === 'OK') {
+            if (results[0]) {
+              map.setZoom(18);
+               var marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+              });
+              document.getElementById('id_address').innerHTML = results[0].formatted_address.replace(/^日本, /, '');
+                  console.log(results[0].formatted_address.replace(/^日本, /, ''));
+              document.getElementById('map_address').value = results[0].formatted_address.replace(/^日本, /, '');
+                  infowindow.setContent(results[0].formatted_address);
+                  infowindow.open(map, marker);
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+        });
+      }
+
+
 
     //住所検索の関数
 function searchAddress(){
