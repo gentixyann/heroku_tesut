@@ -157,14 +157,16 @@ function initialize(data/*Array*/){
      // １本指で操作するためのコード
      gestureHandling: 'greedy',
      //航空写真切り替え
-     mapTypeControl: false, 
+     mapTypeControl: false,
      //移動ボタン
      panControl: false,
      //ズームボタン
      zoomControl: false,
      //ストリートビューボタン
      streetViewControl: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+    // mapTypeId:google.maps.MapTypeId.ROADMAP
+    //航空写真+ラベル
+    mapTypeId: 'hybrid'
   };
 
 //基本となるマップのobject
