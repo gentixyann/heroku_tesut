@@ -164,7 +164,9 @@ function initialize(data/*Array*/){
      zoomControl: false,
      //ストリートビューボタン
      streetViewControl: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+    // mapTypeId:google.maps.MapTypeId.ROADMAP
+    //航空写真+ラベル
+    mapTypeId: 'hybrid'
   };
 
 //基本となるマップのobject
