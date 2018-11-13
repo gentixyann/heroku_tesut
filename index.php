@@ -45,7 +45,7 @@ try{
   <!-- End Google Tag Manager -->
 
     <meta charset="utf-8" />
-    <title>Map</title>
+    <title>Wheview</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -180,11 +180,15 @@ function initialize(data/*Array*/){
             map:map
         });
 
+        var contentString = '<div class="content">'+
+            '<div class="bodyContent">'+
+            // '<p>'+dat.movie_info+'</p>'+
+            dat.movie_info
+            '</div>'+
+            '</div>';
+
         var infoWindow = new google.maps.InfoWindow({
-            content:'<div class="infoWindow">'+
-            //dat.movie_infoはDBのカラム名
-             '<p>'+dat.movie_info+'</p>'+
-             '</div>'
+            content: contentString
         });
          google.maps.event.addListener(marker, 'click', createClickCallback(marker, infoWindow));
     }

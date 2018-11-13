@@ -31,16 +31,19 @@ height: 95.5%;
 }
 
 
-@media screen and (max-width: 480px){
-    iframe{
-    width: 290px;
-    height: 170px;
-}
+.content .bodyContent iframe{
+   width: 100%;
+   height: auto;
 }
 
-@media screen and (min-width: 480px){
-    iframe{
-    width: 500px;
-    height: 280px;
-}
-}
+.gm-style .gm-style-iw {
+           display: block !important;
+            min-width: 250px !important;
+        }
+
+.gm-style div div div div div div div div {
+           padding: 0;
+           margin: 0;
+           padding: 0;
+           top: 0;
+       }
