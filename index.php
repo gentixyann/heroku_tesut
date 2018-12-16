@@ -49,6 +49,7 @@ try{
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Wheview is a website created by a person with GoPro and strolling. 世界中の景色を動画で収め、地図上に配置するサイトです。">
 
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/map_style.css">
