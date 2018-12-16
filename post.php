@@ -2,7 +2,7 @@
 session_start();
 
 //DBに接続
-require('../dbconnect.php');
+require('dbconnect.php');
 
 if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_POST["iframe"]) && !empty($_POST["address"])){
   //trim関数 文字列の両端の空白を削除
@@ -52,15 +52,15 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <link rel="stylesheet" href="../css/post.css" />
-        <link rel="stylesheet" href="../css/hero.css" />
-        <link rel="stylesheet" href="../css/navi.css" />
-        <link rel="stylesheet" href="../css/searchAddress.css" />
+        <link rel="stylesheet" href="css/post.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/navi.css" />
+        <link rel="stylesheet" href="css/searchAddress.css" />
 
         <!-- Google Maps API読み込み -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../js/analyticstracking.js"></script>
+        <script src="js/analyticstracking.js"></script>
     </head>
 
     <body>
@@ -85,7 +85,7 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
                             <h1>POST</h1>
                         </div>
                         <div class="col-md-6">
-                            <h1><a href="https://www.youtube.com" target="_blank"><img src="../img/yt_logo.png" width="200" height="40"></a></h1>
+                            <h1><a href="https://www.youtube.com" target="_blank"><img src="img/yt_logo.png" width="200" height="40"></a></h1>
                         </div>
                     </div>
 
@@ -190,7 +190,7 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="../js/navi.js"></script>
+        <script src="js/navi.js"></script>
 
         <script type="text/javascript">
             var map;

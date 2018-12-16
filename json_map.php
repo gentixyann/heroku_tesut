@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../dbconnect.php');
+require('dbconnect.php');
 
 try{
  //markerしてる人の情報とる
@@ -55,15 +55,15 @@ try{
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../css/hero.css" />
-    <link rel="stylesheet" type="text/css" href="../css/map_style.css">
-    <link rel="stylesheet" href="../css/navi.css" />
-    <link rel="stylesheet" href="../css/searchAddress.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" type="text/css" href="css/map_style.css">
+    <link rel="stylesheet" href="css/navi.css" />
+    <link rel="stylesheet" href="css/searchAddress.css" />
 
-    <script type="text/javascript" src="../js/footerFixed.js"></script>
+    <script type="text/javascript" src="js/footerFixed.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../js/analyticstracking.js"></script>
+    <script src="js/analyticstracking.js"></script>
 </head>
 
 <header>
@@ -71,11 +71,11 @@ try{
 
     <div class=" topnav" id="myTopnav">
         <?php if (isset($_SESSION["id"])){ ?>
-        <a href="logout.php">Logout</a>
-        <a href="profile.php">MyPage</a>
+        <a href="php/logout.php">Logout</a>
+        <a href="php/profile.php">MyPage</a>
         <a href="post.php">POST</a>
         <?php } ?>
-        <a href="help.php">Help</a>
+        <a href="php/help.php">Help</a>
         <a class="active" href="json_map.php">*MAP*</a>
         <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
@@ -102,9 +102,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8 webscope">
-                <a href="html/privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
-                <a href="html/terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
-                <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
+                <a href="php/html/privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
+                <a href="php/html/terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
+                <a href="php/contact.php"> <span class="webscope-text">Contact Us</span></a>
                 <span class="webscope-text"> </span>
                 <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
             </div>
@@ -331,7 +331,7 @@ function searchAddress(){
 
 </script>
 
- <script src="../js/navi.js"></script>
+ <script src="js/navi.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>

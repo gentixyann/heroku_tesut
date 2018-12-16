@@ -3,7 +3,7 @@ session_start();
 
 
 // DBに接続
-  require('../dbconnect.php');
+  require('dbconnect.php');
 
 ?>
 
@@ -33,9 +33,9 @@ session_start();
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/login.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -43,7 +43,7 @@ session_start();
 
     <!--    Goodleのアカウント使用で必要-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="../js/analyticstracking.js"></script>
+    <script src="js/analyticstracking.js"></script>
 
 <style>
     .g-signin2 {
@@ -143,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script type="text/javascript" src="../js/google_login.js"></script>
+    <script type="text/javascript" src="js/google_login.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
 </body>
