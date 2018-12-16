@@ -11,7 +11,7 @@ if (isset($_COOKIE["email"]) && !empty($_COOKIE["email"])){
 }
 
 //DBに接続
-require('dbconnect.php');
+require('../dbconnect.php');
 
 // POST送信されていたら
 if (isset($_POST) && !empty($_POST)){
@@ -32,7 +32,7 @@ if (isset($_POST) && !empty($_POST)){
     // echo "<pre>";
     // var_dump($member);
     // echo "</pre>";
-    
+
     if ($member == false){
       // 認証失敗
       $error["login"] = "failed";
@@ -59,7 +59,7 @@ if (isset($_POST) && !empty($_POST)){
     }
 
   } catch (Exception $e) {
-    
+
   }
 
 

@@ -3,7 +3,7 @@
 session_start();
 
 //DBに接続
-require('dbconnect.php');
+require('../dbconnect.php');
 
 function login_save(){
 if (isset($_COOKIE["email"]) && !empty($_COOKIE["email"])) {
@@ -11,7 +11,7 @@ if (isset($_COOKIE["email"]) && !empty($_COOKIE["email"])) {
   $_POST["password"] = $_COOKIE["password"];
   //$_POST["save"] = "on";
 }
-    
+
     //POST送信されていたら認証処理
 if (isset($_POST) && !empty($_POST)){
   //認証
@@ -55,7 +55,7 @@ if (isset($_POST) && !empty($_POST)){
   }catch(Exception $e){
 
   }
-} 
+}
 }
 
 

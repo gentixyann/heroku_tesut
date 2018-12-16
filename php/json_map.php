@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('dbconnect.php');
+require('../dbconnect.php');
 
 try{
  //markerしてる人の情報とる
@@ -31,26 +31,6 @@ try{
 
   }
 
-
-$lang = "en";
-
-if (isset($_GET["lang"])){
-  $_SESSION["lang"] = $_GET["lang"];
-  $lang = $_SESSION["lang"];
-}else{
-    $_SESSION["lang"] =  $lang;
-}
-
-function trans($word,$lang){
-  //翻訳ファイルを読み込み
-  require("lang/words_".$lang.".php");
-
-  //配列からデータを取得
-  $trans_word = $word_list[$word];
-
-  //文字を返す
-  return $trans_word;
-}
 //var_dump($_SESSION["id"]);
 ?>
 
@@ -75,24 +55,16 @@ function trans($word,$lang){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" type="text/css" href="css/map_style.css">
-    <link rel="stylesheet" href="css/navi.css" />
-    <link rel="stylesheet" href="css/searchAddress.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" type="text/css" href="../css/map_style.css">
+    <link rel="stylesheet" href="../css/navi.css" />
+    <link rel="stylesheet" href="../css/searchAddress.css" />
 
-    <script type="text/javascript" src="js/footerFixed.js"></script>
+    <script type="text/javascript" src="../js/footerFixed.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/analyticstracking.js"></script>
+    <script src="../js/analyticstracking.js"></script>
 </head>
-
-
-
-
-<div id="inr">
-    <a href="json_map.php?lang=ja"><img src="img/btn_03.png" width="60" height="15" alt="Japanese"></a>|
-    <a href="json_map.php?lang=en"><img src="img/btn_04.png" width="52" height="15" alt="English"></a>
-</div>
 
 <header>
       <a class="navbar-brand logo" href="login_google.php"></a>
@@ -359,7 +331,7 @@ function searchAddress(){
 
 </script>
 
- <script src="js/navi.js"></script>
+ <script src="../js/navi.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>

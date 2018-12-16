@@ -2,7 +2,7 @@
 session_start();
 
 //DB接続
-require('dbconnect.php');
+require('../dbconnect.php');
 //var_dump($_SESSION["id"]);
 
 
@@ -66,17 +66,17 @@ require('dbconnect.php');
 
     <title>My Page</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/profile_tmp.css" rel="stylesheet">
-    <link href="css/profile.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/profile_tmp.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/navi.css" />
-    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="../css/navi.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
 
     <script type="text/javascript" src="js/footerFixed.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/analyticstracking.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/analyticstracking.js"></script>
 </head>
 <body>
 
@@ -88,7 +88,6 @@ require('dbconnect.php');
        <a class="active" href="profile.php">MyPage</a>
        <a href="post.php">POST</a>
        <?php } ?>
-       <a href="help.php">Help</a>
        <a href="json_map.php">*MAP*</a>
       <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
@@ -174,8 +173,8 @@ require('dbconnect.php');
     </div>
 </div>
 
-<script src="js/navi.js"> </script>
-<script src="js/warn_profile.js"></script>
+<script src="../js/navi.js"> </script>
+<script src="../js/warn_profile.js"></script>
 
 </body>
 </html>

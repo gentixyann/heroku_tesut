@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
 
-require('dbconnect.php');
+require('../dbconnect.php');
 
  if(isset($_POST) && !empty($_POST["nick_name"])  && !empty($_POST["email"]) && !empty($_POST["inquiries"]) && !empty($_POST["title"])){
 
@@ -11,8 +11,8 @@ require('dbconnect.php');
     $title = $_POST["title"];
     //$member_id = $_SESSION['id'];
 
-    
-      $sql = "INSERT INTO `whereis_contact`(`nick_name`, `email`, `title`, `inquiries`, `created`) 
+
+      $sql = "INSERT INTO `whereis_contact`(`nick_name`, `email`, `title`, `inquiries`, `created`)
       VALUES ('$nick_name', '$email', '$title', '$inquiries', now())";
       $data = array($nick_name, $email, $title, $inquiries);
       $stmt = $dbh->prepare($sql);
@@ -20,7 +20,7 @@ require('dbconnect.php');
 
 
     require('sendgrid/sendgrid.php');
-      
+
   $FROM_EMAIL = $email;
   // they dont like when it comes from @gmail, prefers business emails
   $TO_EMAIL = 'wheview@gmail.com';
@@ -34,7 +34,7 @@ require('dbconnect.php');
   $content = new SendGrid\Content("text/plain",$textContent);
   // Create a mail object
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
-  
+
   $sg = new \SendGrid($API_KEY);
   $response = $sg->client->mail()->send()->post($mail);
 
@@ -62,14 +62,14 @@ header("Location: contact.php");
 
     <title>Contact Us</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <script type="text/javascript" src="js/footerFixed.js"></script>
-    
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/footerFixed.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/navi.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../css/navi.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
 
 
     <script>
@@ -115,7 +115,7 @@ header("Location: contact.php");
 
 <header>
    <a class="navbar-brand logo" href="index.php"></a>
-    <div class=" topnav" id="myTopnav"> 
+    <div class=" topnav" id="myTopnav">
        <?php if (isset($_SESSION["id"])){ ?>
        <a href="logout.php">Logout</a>
        <a href="profile.php">MyPage</a>
@@ -158,7 +158,7 @@ header("Location: contact.php");
                         <input type="email" name="title" class="form-control" placeholder="" value="">
                       </div>
                   </div>
-                  
+
                   <!-- Message -->
                   <div class="form-group">
                     <div class="col-sm-11">
@@ -167,7 +167,7 @@ header("Location: contact.php");
                       <?php if(isset($_POST["inquiries"]) && ($_POST["inquiries"] == "")){ ?>
                         <p class="error">Please Enter Your Message.</p>
                       <?php } ?>
-                
+
                     </div>
                   </div>
                   <!-- </form> -->
@@ -186,8 +186,8 @@ header("Location: contact.php");
       <div class="row">
         <div class="col-sm-2"></div>
           <div class="col-sm-8 webscope">
-          <a href="privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
-                <a href="terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
+          <a href="html/privacy_policy.html"> <span class="webscope-text">Privacy Policy </span></a>
+                <a href="html/terms_of_use.html"> <span class="webscope-text">Team Of Use </span></a>
                 <a href="contact.php"> <span class="webscope-text">Contact Us</span></a>
             <span class="webscope-text"> </span>
                 <!-- <a href="json_map.php"> <img src="img/logo04.png"/> </a> -->
@@ -197,8 +197,8 @@ header("Location: contact.php");
     </div>
   </div>
 
- <script src="js/navi.js"> </script>
-  <script src="js/warn_contact.js"> </script>
+ <script src="../js/navi.js"> </script>
+  <script src="../js/warn_contact.js"> </script>
   <script>
     $(document).on('click', '#btn-submit', function(e) {
          e.preventDefault();

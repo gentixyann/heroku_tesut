@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<!--  created with free sitemap generation system www.sitemapxml.jp  -->
 <url>
   <loc>https://www.wheview.net/index.php</loc>
   <priority>1.0</priority>
@@ -11,37 +11,25 @@
   <priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www.wheview.net/json_map.php</loc>
+  <loc>https://www.wheview.net/php/json_map.php</loc>
   <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://www.wheview.net/json_map.php?lang=ja</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://www.wheview.net/json_map.php?lang=en</loc>
-  <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.wheview.net/index.php</loc>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://www.wheview.net/help.php</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://www.wheview.net/html/privacy_policy.html</loc>
+  <loc>https://www.wheview.net/php/html/privacy_policy.html</loc>
   <priority>0.7</priority>
   <lastmod>2018-04-21T17:01:30+09:00</lastmod>
 </url>
 <url>
-  <loc>https://www.wheview.net/html/terms_of_use.html</loc>
+  <loc>https://www.wheview.net/php/html/terms_of_use.html</loc>
   <priority>0.7</priority>
   <lastmod>2018-04-21T17:01:30+09:00</lastmod>
 </url>
 <url>
-  <loc>https://www.wheview.net/contact.php</loc>
+  <loc>https://www.wheview.net/php/contact.php</loc>
   <priority>0.7</priority>
 </url>
 

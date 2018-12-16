@@ -3,27 +3,7 @@ session_start();
 
 
 // DBに接続
-  require('dbconnect.php');
-
-$lang = "en";
-
-if (isset($_GET["lang"])){
-  $_SESSION["lang"] = $_GET["lang"];
-  $lang = $_SESSION["lang"];
-}else{
-    $_SESSION["lang"] =  $lang;
-}
-
-function trans($word,$lang){
-  //翻訳ファイルを読み込み
-  require("lang/words_".$lang.".php");
-
-  //配列からデータを取得
-  $trans_word = $word_list[$word];
-
-  //文字を返す
-  return $trans_word;
-}
+  require('../dbconnect.php');
 
 ?>
 
@@ -53,9 +33,9 @@ function trans($word,$lang){
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -63,7 +43,7 @@ function trans($word,$lang){
 
     <!--    Goodleのアカウント使用で必要-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="js/analyticstracking.js"></script>
+    <script src="../js/analyticstracking.js"></script>
 
 <style>
     .g-signin2 {
@@ -96,9 +76,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Navigation
     ================================================== -->
 <div class="hero-background">
-  
+
     <img class="strips" src="img/earth.png">
-  
+
     <div class="container">
 <div class="header-container header">
 
@@ -107,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero row">
 <div class="hero-right col-sm-6 col-sm-6">
     <h1 class="header-headline bold">
-        <?php echo trans("世界の景色をお手軽に",$lang); ?>
+        <p>Hello World</p>
         <br>
     </h1>
 </div>
@@ -163,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script type="text/javascript" src="js/google_login.js"></script>
+    <script type="text/javascript" src="../js/google_login.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
 </body>
