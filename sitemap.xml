@@ -11,11 +11,11 @@
   <priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www.wheview.net/php/json_map.php</loc>
+  <url>
+  <loc>https://www.wheview.net/index.php</loc>
   <priority>0.8</priority>
 </url>
-<url>
-  <loc>https://www.wheview.net/index.php</loc>
+  <loc>https://www.wheview.net/json_map.php</loc>
   <priority>0.7</priority>
 </url>
 <url>
