@@ -4,45 +4,38 @@ session_start();
 //DB接続
 require('../dbconnect.php');
 //var_dump($_SESSION["id"]);
+define('MOVIE_PAGE', 15);
 
+if (preg_match('/^[1-9][0-9]*$/', $_GET['page'])) {
+  $page = (int)$_GET['page'];
+} else {
+  $page = 1;
+}
 
   $sql = "SELECT * FROM `whereis_members` WHERE `id`=".$_SESSION["id"];
   $stmt = $dbh->prepare($sql);
   $stmt->execute();
-
   $login_member = $stmt->fetch(PDO::FETCH_ASSOC);
 
+$offset = MOVIE_PAGE * ($page - 1);
 
-  if(isset($_POST["nick_name"]) && !empty($_POST["nick_name"]) || isset($_POST["email"]) && !empty($_POST["email"])){
+$movie_sql = "SELECT * FROM `whereis_map` WHERE `member_id`=".$_SESSION["id"]." ORDER BY `created` DESC LIMIT ".$offset." , " .MOVIE_PAGE;
+$total = $dbh->query("SELECT COUNT(*) FROM `whereis_map` WHERE `member_id`=".$_SESSION["id"])->fetchColumn();
+$totalPages = ceil($total / MOVIE_PAGE);
 
-    $ud_profile_sql = "UPDATE `whereis_members` SET `nick_name`=?,`email`=? WHERE `id`=".$_SESSION["id"];
-    $ud_profile_data = array($_POST['nick_name'],$_POST['email']);
-    $ud_profile_stmt = $dbh->prepare($ud_profile_sql);
-    $ud_profile_stmt->execute($ud_profile_data);
-
-    header("Location: profile.php?member_id".$_SESSION["id"]);
-    exit();
-  }
-
-
-  $movie_sql = "SELECT * FROM `whereis_map` WHERE `member_id`=".$_SESSION["id"]." ORDER BY `created` DESC ";
-  $movie_data = array($login_member['id']);
+$movie_data = array($login_member['id']);
   $movie_stmt = $dbh->prepare($movie_sql);
   $movie_stmt->execute($movie_data);
-
      $whereis_map = array();
       while(1){
-
         $one_movie = $movie_stmt->fetch(PDO::FETCH_ASSOC);
-          //var_dump($one_movie);
         if($one_movie == false){
           break;
         }else{
           $whereis_map[] = $one_movie;
-
       }
-
   }
+
       if (!empty($_POST["delete"])) {
         $del_sql = "DELETE FROM `whereis_map` WHERE `id`=".$_POST["delete"];
           $del_stmt = $dbh->prepare($del_sql);
@@ -120,7 +113,7 @@ require('../dbconnect.php');
 
 
 
-<!-- 連想配列のキーがカラム名と同じものにテーブルのカラム名と同じものをかく予定）-->
+<!-- 連想配列のキーがカラム名と同じものにテーブルのカラム名と同じものをかく）-->
 <div class="container">
   <div class="row">
       <?php foreach ($whereis_map as $one_movie) { ?>
@@ -154,6 +147,21 @@ require('../dbconnect.php');
     </div>
   </div>
   <?php }?>
+  </div>
+<div class="text-center">
+    <?php if ($page > 1) : ?>
+    <a href="?page=<?php echo $page-1 ?>">Before</a>
+    <?php endif; ?>
+    <?php for ($i=1; $i<=$totalPages; $i++) : ?>
+      <?php if ($page == $i) : ?>
+      <strong><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></strong>
+    <?php else: ?>
+    <a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endif; ?>
+    <?php endfor; ?>
+    <?php if ($page < $totalPages) : ?>
+    <a href="?page=<?php echo $page+1 ?>">Next</a>
+    <?php endif; ?>
   </div>
 </div>
 

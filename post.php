@@ -69,8 +69,8 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
                 <a class="navbar-brand logo" href="login_google.php"></a>
                 <div class=" topnav" id="myTopnav">
                     <?php if (isset($_SESSION["id"])){ ?>
-                    <a href="logout.php">Logout</a>
-                    <a href="profile.php">MyPage</a>
+                    <a href="php/logout.php">Logout</a>
+                    <a href="php/profile.php">MyPage</a>
                     <a class="active" href="post.php">POST</a>
                     <?php } ?>
                     <a href="json_map.php">*MAP*</a>
