@@ -12,6 +12,7 @@ if (preg_match('/^[1-9][0-9]*$/', $_GET['page'])) {
   $page = 1;
 }
 
+
   $sql = "SELECT * FROM `whereis_members` WHERE `id`=".$_SESSION["id"];
   $stmt = $dbh->prepare($sql);
   $stmt->execute();
