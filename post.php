@@ -214,7 +214,8 @@ if(isset($_POST) && !empty($_POST["lat"]) && !empty($_POST["lng"]) && !empty($_P
                     /* 地図の中心 */
                     center: latlng,
                     /* 地図タイプ */
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                    //mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeId: 'hybrid'
                 };
                 /* 地図オブジェクト */
                 map = new google.maps.Map(document.getElementById("map"), myOptions);
