@@ -124,10 +124,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><!--end of hero-background-->
 
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-    
+
 
 <script>
   // Initialize Firebase
+  // san genのアカウント
   var config = {
     apiKey: "AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64",
     authDomain: "wheview-e33c8.firebaseapp.com",
