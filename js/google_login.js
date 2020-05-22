@@ -39,7 +39,6 @@ writeUserData(userID, userName, userEmail, imageUrl);
  
     //mysqlのDBに登録
 sendDb(userID, userName, userEmail, imageUrl);
-    
 
 }).catch(function(error) {
   // Handle Errors here.
