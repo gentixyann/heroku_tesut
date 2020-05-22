@@ -28,7 +28,7 @@ session_start();
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <!--    Goodle クライアントID-->
-    <meta name="google-signin-client_id" content="134289896912-mtrdpqptguauc54b1q1qtd9ge5s0du8k.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="134289896912-o131fibe8vt086e3v1j76fug8d8on9ds.apps.googleusercontent.com">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
