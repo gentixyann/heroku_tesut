@@ -49,6 +49,7 @@ sendDb(userID, userName, userEmail, imageUrl);
   // The firebase.auth.AuthCredential type that was used.
   var credential = error.credential;
   // ...
+  console.log('エラーが発生したよ' + errorCode + errorMessage + email );
 });   
 }
 
