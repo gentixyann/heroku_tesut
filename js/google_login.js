@@ -50,6 +50,14 @@ sendDb(userID, userName, userEmail, imageUrl);
   var credential = error.credential;
   // ...
   console.log('エラーが発生したよ' + errorCode + errorMessage + email );
+  console.log('エラーコードはこれ' + errorCode );
+
+  console.log('エラーメッセージはこれ' + errorMessage);
+
+  console.log('エラーemail？はこれ' + email );
+  console.log('エラーcredential？発生したよ' + credential );
+
+
 });   
 }
 
