@@ -124,20 +124,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><!--end of hero-background-->
 
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    
 
 <script>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64",
-        authDomain: "wheview-e33c8.firebaseapp.com",
-        databaseURL: "https://wheview-e33c8.firebaseio.com",
-        projectId: "wheview-e33c8",
-        storageBucket: "wheview-e33c8.appspot.com",
-        messagingSenderId: "134289896912",
-        appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
-        measurementId: "G-T1TE6FP988"
+    authDomain: "wheview-e33c8.firebaseapp.com",
+    databaseURL: "https://wheview-e33c8.firebaseio.com",
+    projectId: "wheview-e33c8",
+    storageBucket: "wheview-e33c8.appspot.com",
+    messagingSenderId: "134289896912",
+    appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
+    measurementId: "G-T1TE6FP988"
   };
   firebase.initializeApp(config);
 </script>
