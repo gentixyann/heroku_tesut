@@ -145,7 +145,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script type="text/javascript" src="js/google_login.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
 </body>
