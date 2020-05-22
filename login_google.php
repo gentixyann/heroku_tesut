@@ -129,13 +129,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64",
-    authDomain: "wheview-e33c8.firebaseapp.com",
-    databaseURL: "https://wheview-e33c8.firebaseio.com",
-    projectId: "wheview-e33c8",
-    storageBucket: "wheview-e33c8.appspot.com",
-    messagingSenderId: "134289896912",
-    appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
-    measurementId: "G-T1TE6FP988"
+        authDomain: "wheview-e33c8.firebaseapp.com",
+        databaseURL: "https://wheview-e33c8.firebaseio.com",
+        projectId: "wheview-e33c8",
+        storageBucket: "wheview-e33c8.appspot.com",
+        messagingSenderId: "134289896912",
+        appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
+        measurementId: "G-T1TE6FP988"
   };
   firebase.initializeApp(config);
 </script>
@@ -145,6 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script type="text/javascript" src="js/google_login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
 </body>
