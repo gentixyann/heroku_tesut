@@ -77,6 +77,8 @@ if('serviceWorker' in navigator){
      });
 </script>
 
+<script data-ad-client="ca-pub-7811832444315082" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 

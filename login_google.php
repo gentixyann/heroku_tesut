@@ -28,7 +28,7 @@ session_start();
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <!--    Goodle クライアントID-->
-    <meta name="google-signin-client_id" content="1028844914150-vequeee5hlji30ij1ci4v8ebdva5o42v.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="134289896912-mtrdpqptguauc54b1q1qtd9ge5s0du8k.apps.googleusercontent.com">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -50,7 +50,7 @@ session_start();
         width: 100%;
     }
 
-    .g-signin2>div {
+    .g-signin2 div {
         margin: 0 auto;
     }
 </style>
@@ -128,13 +128,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   // Initialize Firebase
   var config = {
-    //apiKey: "AIzaSyDStsWYUik9kLI-hbkIPQxSsBX-X-smIlw",
-    apiKey: "AIzaSyDVezH32ZycwFc8mHGYyhQgK0ovBgX1WGY",
-    authDomain: "where-map-e3a10.firebaseapp.com",
-    databaseURL: "https://where-map-e3a10.firebaseio.com",
-    projectId: "where-map-e3a10",
-    storageBucket: "where-map-e3a10.appspot.com",
-    messagingSenderId: "1028844914150"
+    apiKey: "AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64",
+    authDomain: "wheview-e33c8.firebaseapp.com",
+    databaseURL: "https://wheview-e33c8.firebaseio.com",
+    projectId: "wheview-e33c8",
+    storageBucket: "wheview-e33c8.appspot.com",
+    messagingSenderId: "134289896912",
+    appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
+    measurementId: "G-T1TE6FP988"
   };
   firebase.initializeApp(config);
 </script>
