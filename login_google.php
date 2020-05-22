@@ -28,7 +28,7 @@ session_start();
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <!--    Goodle クライアントID-->
-    <meta name="google-signin-client_id" content="134289896912-o131fibe8vt086e3v1j76fug8d8on9ds.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="134289896912-mtrdpqptguauc54b1q1qtd9ge5s0du8k.apps.googleusercontent.com">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -124,6 +124,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><!--end of hero-background-->
 
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
 <script>
   // Initialize Firebase

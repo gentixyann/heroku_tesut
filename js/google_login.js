@@ -1,5 +1,6 @@
 // google login
 var provider = new firebase.auth.GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 var user;
 
 // Get a reference to the database service
