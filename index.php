@@ -56,9 +56,10 @@ try{
     <link rel="stylesheet" href="css/searchAddress.css" />
     <link rel="stylesheet" href="css/modal.css" />
 
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script> -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0jIuanGD4d4KNxkq2w4jbwxbQ0tMImXc&libraries=places"></script>
     
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64&libraries=places"></script>
+   <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64&libraries=places"></script>
+     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/analyticstracking.js"></script>
     <!-- serviceworker.jsを登録 -->
