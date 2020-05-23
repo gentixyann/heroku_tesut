@@ -28,7 +28,7 @@ session_start();
     <meta name="Nova theme" content="width=device-width, initial-scale=1">
 
     <!--    Goodle クライアントID-->
-    <meta name="google-signin-client_id" content="134289896912-mtrdpqptguauc54b1q1qtd9ge5s0du8k.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="***.apps.googleusercontent.com">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -130,14 +130,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Initialize Firebase
   // san genのアカウント
   var config = {
-    apiKey: "AIzaSyAm9clF_BmWTIbLLzvGWvE4Rfa0lhNyg64",
-    authDomain: "wheview-e33c8.firebaseapp.com",
-    databaseURL: "https://wheview-e33c8.firebaseio.com",
-    projectId: "wheview-e33c8",
-    storageBucket: "wheview-e33c8.appspot.com",
-    messagingSenderId: "134289896912",
-    appId: "1:134289896912:web:21aa889a04e99a9fa2b5d5",
-    measurementId: "G-T1TE6FP988"
+    apiKey: "***",
+    authDomain: "***.firebaseapp.com",
+    databaseURL: "***.firebaseio.com",
+    projectId: "***",
+    storageBucket: "***.appspot.com",
+    messagingSenderId: "***",
+    appId: "***",
+    measurementId: "***"
   };
   firebase.initializeApp(config);
 </script>
